@@ -19,189 +19,101 @@
                             Asperiores quaerat rem nisi!</p>
                     </div>
                     <div class="space-y-8 md:grid md:grid-cols-6 lg:grid-cols-2 md:gap-12 md:space-y-0">
-                        <div>
-
-                            <div
-                                class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                                    <path
-                                        d="M8 0a7.992 7.992 0 0 0-6.583 12.535 1 1 0 0 0 .12.183l.12.146c.112.145.227.285.326.4l5.245 6.374a1 1 0 0 0 1.545-.003l5.092-6.205c.206-.222.4-.455.578-.7l.127-.155a.934.934 0 0 0 .122-.192A8.001 8.001 0 0 0 8 0Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
-                                </svg>
-                                <a href="#">
-                                    <h5
-                                        class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                                        Fingerlings</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit,
-                                    amet consectetur adipisicing elit. Iste blanditiis aliquid, possimus inventore
-                                    voluptas ea. Obcaecati fugiat quas blanditiis recusandae sequi voluptates
-                                    provident laudantium? Maiores cupiditate officia quod vero blanditiis.</p>
-                                <a href="#" class="inline-flex items-center text-blue-600 hover:underline">
-                                    See our guideline
-                                    <svg class="w-3 h-3 ml-2.5" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                                    </svg>
-                                </a>
-                            </div>
-
-                        </div>
-                        <div>
-                            <div
-                                class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                                    <path
-                                        d="M8 0a7.992 7.992 0 0 0-6.583 12.535 1 1 0 0 0 .12.183l.12.146c.112.145.227.285.326.4l5.245 6.374a1 1 0 0 0 1.545-.003l5.092-6.205c.206-.222.4-.455.578-.7l.127-.155a.934.934 0 0 0 .122-.192A8.001 8.001 0 0 0 8 0Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
-                                </svg>
-                                <a href="#">
-                                    <h5
-                                        class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                                        Fingerlings</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit,
-                                    amet consectetur adipisicing elit. Iste blanditiis aliquid, possimus inventore
-                                    voluptas ea. Obcaecati fugiat quas blanditiis recusandae sequi voluptates
-                                    provident laudantium? Maiores cupiditate officia quod vero blanditiis.</p>
-                                <a href="#" class="inline-flex items-center text-blue-600 hover:underline">
-                                    See our guideline
-                                    <svg class="w-3 h-3 ml-2.5" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div>
-                            <div
-                                class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                                    <path
-                                        d="M8 0a7.992 7.992 0 0 0-6.583 12.535 1 1 0 0 0 .12.183l.12.146c.112.145.227.285.326.4l5.245 6.374a1 1 0 0 0 1.545-.003l5.092-6.205c.206-.222.4-.455.578-.7l.127-.155a.934.934 0 0 0 .122-.192A8.001 8.001 0 0 0 8 0Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
-                                </svg>
-                                <a href="#">
-                                    <h5
-                                        class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                                        Fingerlings</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit,
-                                    amet consectetur adipisicing elit. Iste blanditiis aliquid, possimus inventore
-                                    voluptas ea. Obcaecati fugiat quas blanditiis recusandae sequi voluptates
-                                    provident laudantium? Maiores cupiditate officia quod vero blanditiis.</p>
-                                <a href="#" class="inline-flex items-center text-blue-600 hover:underline">
-                                    See our guideline
-                                    <svg class="w-3 h-3 ml-2.5" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div>
-                            <div
-                                class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                                    <path
-                                        d="M8 0a7.992 7.992 0 0 0-6.583 12.535 1 1 0 0 0 .12.183l.12.146c.112.145.227.285.326.4l5.245 6.374a1 1 0 0 0 1.545-.003l5.092-6.205c.206-.222.4-.455.578-.7l.127-.155a.934.934 0 0 0 .122-.192A8.001 8.001 0 0 0 8 0Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
-                                </svg>
-                                <a href="#">
-                                    <h5
-                                        class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                                        Fingerlings</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit,
-                                    amet consectetur adipisicing elit. Iste blanditiis aliquid, possimus inventore
-                                    voluptas ea. Obcaecati fugiat quas blanditiis recusandae sequi voluptates
-                                    provident laudantium? Maiores cupiditate officia quod vero blanditiis.</p>
-                                <a href="#" class="inline-flex items-center text-blue-600 hover:underline">
-                                    See our guideline
-                                    <svg class="w-3 h-3 ml-2.5" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div>
-                            <div
-                                class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                                    <path
-                                        d="M8 0a7.992 7.992 0 0 0-6.583 12.535 1 1 0 0 0 .12.183l.12.146c.112.145.227.285.326.4l5.245 6.374a1 1 0 0 0 1.545-.003l5.092-6.205c.206-.222.4-.455.578-.7l.127-.155a.934.934 0 0 0 .122-.192A8.001 8.001 0 0 0 8 0Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
-                                </svg>
-                                <a href="#">
-                                    <h5
-                                        class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                                        Fingerlings</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit,
-                                    amet consectetur adipisicing elit. Iste blanditiis aliquid, possimus inventore
-                                    voluptas ea. Obcaecati fugiat quas blanditiis recusandae sequi voluptates
-                                    provident laudantium? Maiores cupiditate officia quod vero blanditiis.</p>
-                                <a href="#" class="inline-flex items-center text-blue-600 hover:underline">
-                                    See our guideline
-                                    <svg class="w-3 h-3 ml-2.5" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div>
-                            <div
-                                class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                                    <path
-                                        d="M8 0a7.992 7.992 0 0 0-6.583 12.535 1 1 0 0 0 .12.183l.12.146c.112.145.227.285.326.4l5.245 6.374a1 1 0 0 0 1.545-.003l5.092-6.205c.206-.222.4-.455.578-.7l.127-.155a.934.934 0 0 0 .122-.192A8.001 8.001 0 0 0 8 0Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
-                                </svg>
-                                <a href="#">
-                                    <h5
-                                        class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                                        Fingerlings</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit,
-                                    amet consectetur adipisicing elit. Iste blanditiis aliquid, possimus inventore
-                                    voluptas ea. Obcaecati fugiat quas blanditiis recusandae sequi voluptates
-                                    provident laudantium? Maiores cupiditate officia quod vero blanditiis.</p>
-                                <a href="#" class="inline-flex items-center text-blue-600 hover:underline">
-                                    See our guideline
-                                    <svg class="w-3 h-3 ml-2.5" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
+                        @foreach($locations as $location)
+                        <div class="p-5" id="hover-green" style="border: 3px solid #33333314;border-radius: 20px 20px 20px 0px;">
+                                      <div style="height: 200px;">
+                                      <a href="#">
+                                          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" id="line-breaks">
+                                              {{ $location->inno_name }}</h5>
+                                      </a>
+                                      <div class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="line-breaks">
+                                          <p id="p-breaks">{!! $location->inno_description !!}}</p>
+                                      </div>
+                                      </div>
+                                      
+                                  </div>
+                        @endforeach
+                        
                     </div>
                 </div>
             </section>
+
+            <nav aria-label="Page navigation example" id="pagination">
+                <ul class="inline-flex -space-x-px text-sm">
+                    {{-- Previous Page Link --}}
+                    @if ($locations->onFirstPage())
+                        <li class="disabled">
+                            <span class="flex items-center justify-center px-3 h-8 text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg opacity-50 cursor-not-allowed">Previous</span>
+                        </li>
+                    @else
+                        <li>
+                            <a href="{{ $locations->previousPageUrl() }}" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                        </li>
+                    @endif
+            
+                    {{-- Pagination Elements --}}
+                    @for ($page = 1; $page <= $locations->lastPage(); $page++)
+                        {{-- Display the first 3 pages --}}
+                        @if ($page <= 3 || $page >= $locations->lastPage() - 2)
+                            <li>
+                                <a href="{{ $locations->url($page) }}" class="flex items-center justify-center px-3 h-8 leading-tight @if ($locations->currentPage() === $page) text-blue-600 bg-blue-50 @else text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white @endif">{{ $page }}</a>
+                            </li>
+                        @elseif ($page >= $locations->currentPage() - 1 && $page <= $locations->currentPage() + 1)
+                            {{-- Display a few pages before and after the current page --}}
+                            <li>
+                                <a href="{{ $locations->url($page) }}" class="flex items-center justify-center px-3 h-8 leading-tight @if ($locations->currentPage() === $page) text-blue-600 bg-blue-50 @else text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white @endif">{{ $page }}</a>
+                            </li>
+                        @elseif ($page == $locations->currentPage() - 2 || $page == $locations->currentPage() + 2)
+                            {{-- Display dots in the middle --}}
+                            <li><span class="flex items-center justify-center px-3 h-8 text-gray-500">...</span></li>
+                        @endif
+                    @endfor
+            
+                    {{-- Next Page Link --}}
+                    @if ($locations->hasMorePages())
+                        <li>
+                            <a href="{{ $locations->nextPageUrl() }}" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+                        </li>
+                    @else
+                        <li class="disabled">
+                            <span class="flex items-center justify-center px-3 h-8 text-gray-500 bg-white border border-e-0 border-gray-300 rounded-e-lg opacity-50 cursor-not-allowed">Next</span>
+                        </li>
+                    @endif
+                </ul>
+            </nav>
+
         </div>
-        <div class="hidden lg:mt-0 lg:col-span-7 lg:flex">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15956.155858185879!2d36.81425975!3d-1.1324943!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1699462315844!5m2!1sen!2ske"
-                style="height: 100%;width: 100%;" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+            <!--<iframe-->
+            <!--    src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15956.155858185879!2d36.81425975!3d-1.1324943!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1699462315844!5m2!1sen!2ske"-->
+            <!--    style="height: 100%;width: 100%;" style="border:0;" allowfullscreen="" loading="lazy"-->
+            <!--    referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+            
+            <div id="map1" style="height: 500px;overflow: initial !important;width: 57vw;height: 100vh"></div>
+     
     </div>
 </section>
 </div>
+
+
+
+<script>
+    function initMap() {
+        var mapOptions = {
+            zoom: 8,
+            center: { lat: 0.8041, lng: 36.5355 } // Default center of the map
+        };
+
+        var map = new google.maps.Map(document.getElementById('map1'), mapOptions);
+
+        @json($locations).forEach(function (location) {
+            new google.maps.Marker({
+                position: { lat: parseFloat(location.inno_longitude), lng: parseFloat(location.inno_latitude) },
+                map: map
+            });
+        });
+    }
+</script>
+
 
 @include('pages.inc.footer')
 @endsection

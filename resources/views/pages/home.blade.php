@@ -97,7 +97,9 @@
                                           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"  id="line-breaks">
                                               {{$item->inno_name}}</h5>
                                       </a>
-                                      <div class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="line-breaks">{!! $item->inno_description !!}</div>
+                                      <div class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="line-breaks">
+                                          <p  id="p-breaks">{!! $item->inno_description !!}</p>
+                                      </div>
                                       </div>
                                       
                                       <a href="{{ route('innovationdetails', $item->id) }}"
@@ -152,67 +154,67 @@
                         <div class="grid grid-cols-6 md:grid-cols-6">
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
-                                    src="http://197.156.140.250:1080/sites/default/files/styles/height/public/listing-location-image/Elgeyo-Marakwet.png?itok=xYZ-fq34"
+                                    src="https://www.shutterstock.com/shutterstock/photos/1811041534/display_1500/stock-vector-this-is-logo-of-county-in-republic-of-kenya-1811041534.jpg"
                                     alt="">
                             </div>
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
-                                    src="http://197.156.140.250:1080/sites/default/files/styles/height/public/listing-location-image/Bungoma.png?itok=qddR-Yo9"
+                                    src="https://seeklogo.com/images/N/nyeri-county-logo-CD6A94CBC7-seeklogo.com.png"
                                     alt="">
                             </div>
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
-                                    src="http://197.156.140.250:1080/sites/default/files/styles/height/public/listing-location-image/Mombasa.png?itok=RRWst2SU"
+                                    src="https://keproba-bucket.s3.eu-central-1.amazonaws.com/counties/1646128161261639891.png"
                                     alt="">
                             </div>
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
-                                    src="http://197.156.140.250:1080/sites/default/files/styles/height/public/listing-location-image/Bomet.png?itok=NqafF9yb"
+                                    src="https://keproba-bucket.s3.eu-central-1.amazonaws.com/counties/16461338001430511872.png"
                                     alt="">
                             </div>
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
-                                    src="http://197.156.140.250:1080/sites/default/files/styles/height/public/listing-location-image/Mombasa.png?itok=RRWst2SU"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/0/06/Coat_of_Arms_of_Bomet_County.png"
                                     alt="">
                             </div>
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
-                                    src="http://197.156.140.250:1080/sites/default/files/styles/height/public/listing-location-image/Bomet.png?itok=NqafF9yb"
+                                    src="https://e7.pngegg.com/pngimages/545/465/png-clipart-taita-taveta-county-kilifi-county-nyeri-county-county-government-of-kwale-county-treasury-narok-county-court-of-arms-kenya-logo-brand.png"
                                     alt="">
                             </div>
                         </div>
                     </div>
                     <!-- Item 2 -->
                     <div class="hidden duration-200 ease-linear" data-carousel-item="active">
-                        <div class="grid grid-cols-6 md:grid-cols-6">
+                         <div class="grid grid-cols-6 md:grid-cols-6">
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
-                                    src="http://197.156.140.250:1080/sites/default/files/styles/height/public/listing-location-image/Elgeyo-Marakwet.png?itok=xYZ-fq34"
+                                    src="https://www.shutterstock.com/shutterstock/photos/1811041534/display_1500/stock-vector-this-is-logo-of-county-in-republic-of-kenya-1811041534.jpg"
                                     alt="">
                             </div>
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
-                                    src="http://197.156.140.250:1080/sites/default/files/styles/height/public/listing-location-image/Bungoma.png?itok=qddR-Yo9"
+                                    src="https://seeklogo.com/images/N/nyeri-county-logo-CD6A94CBC7-seeklogo.com.png"
                                     alt="">
                             </div>
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
-                                    src="http://197.156.140.250:1080/sites/default/files/styles/height/public/listing-location-image/Mombasa.png?itok=RRWst2SU"
+                                    src="https://keproba-bucket.s3.eu-central-1.amazonaws.com/counties/1646128161261639891.png"
                                     alt="">
                             </div>
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
-                                    src="http://197.156.140.250:1080/sites/default/files/styles/height/public/listing-location-image/Bomet.png?itok=NqafF9yb"
+                                    src="https://keproba-bucket.s3.eu-central-1.amazonaws.com/counties/16461338001430511872.png"
                                     alt="">
                             </div>
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
-                                    src="http://197.156.140.250:1080/sites/default/files/styles/height/public/listing-location-image/Mombasa.png?itok=RRWst2SU"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/0/06/Coat_of_Arms_of_Bomet_County.png"
                                     alt="">
                             </div>
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
-                                    src="http://197.156.140.250:1080/sites/default/files/styles/height/public/listing-location-image/Bomet.png?itok=NqafF9yb"
+                                    src="https://e7.pngegg.com/pngimages/545/465/png-clipart-taita-taveta-county-kilifi-county-nyeri-county-county-government-of-kwale-county-treasury-narok-county-court-of-arms-kenya-logo-brand.png"
                                     alt="">
                             </div>
                         </div>
@@ -266,14 +268,8 @@
                             reinvent
                             the
                             wheel</h2>
-                        <p class="mb-4">We are strategists, designers and developers. Innovators and problem solvers.
-                            Small enough
-                            to be simple and quick, but big enough to deliver the scope you want at the pace you need. Small
-                            enough to
-                            be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
-                        <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be
-                            simple
-                            and quick.</p>
+                        <p class="mb-4">Agriculture Sector Development Support Programme Phase Two (ASDSP II) is one of the key programmes designed by the Ministry of Agriculture, Livestock, Fisheries and Cooperatives and 47 county governments to contribute to addressing food and nutrition security and promote manufacturing. It is primarily designed to enhance the capacity of different Priority Value Chain Actors at different levels to tackle the problems that hinder commercialization of Agriculture.</p>
+                        <p>The programme is implemented by the Government of Kenya (National and 47 county governments) with strong participation of the private sector as direct beneficiaries or service providers. It is financed by the Government of Kenya, Sida and EU for a period of five years (2017-2022).</p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 mt-8">
                         <img class="w-full rounded-lg"
@@ -307,11 +303,7 @@
             font-weight: bold;">
                         We invest in Kenyans potential</h4>
                     <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
-                        style="color: #000">Lorem ipsum
-                        dolor sit amet consectetur, adipisicing elit. Odit accusantium sequi praesentium placeat odio
-                        consequuntur
-                        quae atque in nobis nesciunt, necessitatibus exercitationem delectus cum sint tempora totam illum id
-                        officia?</p>
+                        style="color: #000">ASDSP II is operating under a devolved system of government. The Agriculture sector recognized this and developed a consultation and cooperation mechanism to promote good working relationship between the two levels.</p>
                     <div
                         class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
 

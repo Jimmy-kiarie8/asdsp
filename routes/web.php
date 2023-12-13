@@ -74,7 +74,7 @@ $inovations = Innovation::select(
 
 
 
-Route::get('/innovation-list', function () {
+Route::get('/innovation-list_', function () {
 	 // $data=KraHelper::getData();
 	 //   dd($data);
 
@@ -120,17 +120,20 @@ Route::get('/innovation-list', function () {
 
 	  
     return  view('frontend.home',$data);
-})->name('innovation-list');
+})->name('innovation-list_');
 
 Route::any('/aboutus','\App\Http\Controllers\AboutUs@Index');
 Route::any('/partners','\App\Http\Controllers\AboutUs@Partners');
 Route::any('/faqs','\App\Http\Controllers\AboutUs@faqs');
-Route::any('/innovations','\App\Http\Controllers\AboutUs@innovations');
+Route::any('/innovations','\App\Http\Controllers\AboutUs@innovations')->name('innovations');
 Route::any('/successstories','\App\Http\Controllers\AboutUs@successstories');
 Route::any('/SuccessStories/Details/{id}','InnovationController@Details');
 Route::any('/publications','\App\Http\Controllers\AboutUs@publications');
 Route::any('/contactus','\App\Http\Controllers\AboutUs@contactus');
 Route::any('/innovationdetails/{id}','\App\Http\Controllers\AboutUs@innovationdetails')->name('innovationdetails');
+
+
+Route::any('/innovation-list','\App\Http\Controllers\AboutUs@innovation_list')->name('innovation-list');
 
 Route::any('/Successstorydetails/{id}','\App\Http\Controllers\AboutUs@Successstorydetails');
 
@@ -152,7 +155,6 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/upload', '\App\Http\Controllers\UploadController@getUploadTestPage');
 Route::any('/System/file/upload','UploadController@uploadFile');
 Route::any('/System/file/fetch','UploadController@fetchFiles');
-
 
 
 
