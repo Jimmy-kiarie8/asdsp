@@ -21,6 +21,8 @@
      Route::any('/Innovations/DeleteInnovation/{id}','InnovationController@DeleteInnovation');
     
     Route::any('/Innovations/Create','InnovationController@Create');
+    Route::any('/Innovations/edit/{id}','InnovationController@edit');
+    Route::any('/Innovations/update/{id}','InnovationController@update')->name('Innovations-update');
     Route::any('/Innovations/Index','InnovationController@Index');
     Route::any('/Innovations/Import','InnovationController@Import');
     Route::any('/Innovations/EditCategory/{id}','InnovationController@EditCategory');
