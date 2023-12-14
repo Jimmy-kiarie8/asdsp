@@ -28,6 +28,7 @@
     Route::any('/Innovations/EditCategory/{id}','InnovationController@EditCategory');
     Route::any('/Innovations/EditBeneficiary/{id}','InnovationController@EditBeneficiary');
     Route::any('/Innovations/EditCoverImage/{id}','InnovationController@EditCoverImage');
+    Route::any('/Innovations/updateCoverImage/{id}','InnovationController@updateCoverImage');
     Route::any('/Innovations/fetchList','InnovationController@fetchList');
     Route::any('/Innovations/getWards','InnovationController@GetWards');
     Route::any('/Innovations/Coordinates','InnovationController@Coordinates');

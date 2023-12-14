@@ -201,14 +201,46 @@ where 1
 
     public function EditCoverImage($id, Request $request)
     {
-
         $data['model'] = $model = Innovation::find($id);
         $data['url'] = url()->current();
+
+        if ($request->isMethod("post")) {
+            $this->updateCoverImage($id, $request);
+
+            $data['page_title'] = "Innovations List";
+
+            return view('usermanagement::innovations.index', $data);
+        }
+
 
         return view('usermanagement::innovations._editcoverimage', $data);
     }
 
 
+    public function updateCoverImage($id, Request $request)
+    {
+        DB::beginTransaction();
+
+        try {
+
+            $file = $request->file;
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('uploads'), $filename);
+
+            $innovationimage = new InnovationImage();
+            $innovationimage->image_id = $filename;
+            $innovationimage->innovation_id = $id;
+            $innovationimage->save();
+            $innovation = Innovation::find($id);
+
+            $innovation->inno_cover_image = $filename;
+            $innovation->save();
+            DB::commit();
+        } catch (\Throwable $th) {
+            DB::rollback();
+            throw $th;
+        }
+    }
 
 
 
@@ -639,7 +671,7 @@ where innovations.is_deleted is null   ", ["Submitted", "Pending"]);
     {
         if ($request->isMethod("post")) {
             return   $this->update($request, $id);
-            return ;
+            return;
         } else {
         }
         $data['page_title'] = "Edit Innovation";
@@ -665,7 +697,7 @@ where innovations.is_deleted is null   ", ["Submitted", "Pending"]);
         $valueschanins = CountyValueChain::join('value_chains', 'value_chains.id', '=', 'county_value_chains.value_chain_id')->where(['county_id' => $this->sid])->pluck('value_name', 'value_chains.id')->toArray();
         $data['valuechains'] = $valueschanins;
         $data['model'] = Innovation::find($id);
-        
+
 
         //   return $data;
 
