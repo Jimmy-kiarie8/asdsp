@@ -125,7 +125,7 @@
                   </li>
                   <li id=""
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-15">
-                    <a href="{{ route('innovation-list') }}" aria-current="page">INNOVATIONS</a>
+                    <a href="{{ route('innovations') }}" aria-current="page">INNOVATIONS</a>
                   </li>
                   <li id="" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children ">
                     <a href="">RESOURCES</a>

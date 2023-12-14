@@ -273,10 +273,10 @@
                     </div>
                     <div class="grid grid-cols-2 gap-4 mt-8">
                         <img class="w-full rounded-lg"
-                            src="{{ asset('public/media/1.jpeg') }}"
+                            src="{{ asset('/media/1.jpeg') }}"
                             alt="office content 1" style="    height: 310px;">
                         <img class="mt-4 w-full lg:mt-10 rounded-lg"
-                            src="{{ asset('public/media/3.jpeg') }}"
+                            src="{{ asset('/media/3.jpeg') }}"
                             alt="office content 2" style="    height: 310px;">
                     </div>
                 </div>
