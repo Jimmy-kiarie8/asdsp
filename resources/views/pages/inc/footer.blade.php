@@ -4,7 +4,7 @@
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0" style="width: 30%">
           <a href="" class="flex items-center">
-            <img src="{{ asset('public/media/logo.png') }}" class="mr-3 h-8" alt="FlowBite Logo" style="width: 200px;height: 150px;" />
+            <img src="{{ asset('/media/logo.png') }}" class="mr-3 h-8" alt="ASDSP" style="width: 200px;height: 150px;" />
             {{-- <span class="self-center text-2xl font-semibold whitespace-nowrap light:text-white"> ASDSP</span> --}}
           </a>
           <p style="color: #fff; margin-top: 10px">The ASDSP Innovation portal is an online knowledge repository that provides a single access point for discovery, acquisition and sharing of information about innovations, technologies, and best practices.

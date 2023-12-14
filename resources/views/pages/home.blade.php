@@ -10,7 +10,7 @@
                 <div class="video-container">
                     <video src="https://mag.co.ke/apps/public/media/background.mp4" autoplay muted loop></video>
                 </div>
-                <div class="content">
+                {{-- <div class="content">
                     <div class="max-w-screen-xl px-4 mx-auto lg:px-12 w-full">
                         <!-- Start coding here -->
                         <div class="relative bg-white shadow-md light:bg-gray-800 sm:rounded-lg" id="form1">
@@ -57,7 +57,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </section>
         </div>
 
@@ -264,10 +264,7 @@
             <section class="bg-white light:bg-gray-900" id="section3">
                 <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div class="font-light text-gray-500 sm:text-lg light:text-gray-400">
-                        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 light:text-white">We didn't
-                            reinvent
-                            the
-                            wheel</h2>
+                        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 light:text-white">Welcome to ASDPS TIMPs Portal</h2>
                         <p class="mb-4">Agriculture Sector Development Support Programme Phase Two (ASDSP II) is one of the key programmes designed by the Ministry of Agriculture, Livestock, Fisheries and Cooperatives and 47 county governments to contribute to addressing food and nutrition security and promote manufacturing. It is primarily designed to enhance the capacity of different Priority Value Chain Actors at different levels to tackle the problems that hinder commercialization of Agriculture.</p>
                         <p>The programme is implemented by the Government of Kenya (National and 47 county governments) with strong participation of the private sector as direct beneficiaries or service providers. It is financed by the Government of Kenya, Sida and EU for a period of five years (2017-2022).</p>
                     </div>

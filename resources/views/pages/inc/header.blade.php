@@ -4,7 +4,7 @@
 <nav class="bg-white border-gray-200 dark:bg-gray-900" id="mobile">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img width="1400" height="159" src="{{ asset('public/media/logo.png') }}"  class="h-8" 
+        <img width="1400" height="159" src="{{ asset('/media/logo.png') }}"  class="h-8" 
               alt="" loading="lazy" style="border-radius: 20px;width: 100px;height: 74px;" />
             </a>
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
@@ -108,7 +108,7 @@
 
         <div class="stm-header__row stm-header__row_bottom">
           <a href="{{ route('homepage') }}" title="">
-            <img width="1400" height="159" src="{{ asset('public/media/logo.png') }}" class="logo"
+            <img width="1400" height="159" src="{{ asset('/media/logo.png') }}" class="logo"
               alt="" loading="lazy" style="width:150px; border-radius: 20px" /> </a>
           <div class="stm-header__cell stm-header__cell_center">
             <div class="stm-header__element object1538 stm-header__element_fullwidth">
