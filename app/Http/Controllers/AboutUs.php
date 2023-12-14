@@ -106,11 +106,12 @@ class AboutUs extends Controller
     {
 
         $categories = request('categories');
+        $search = request('search');
 
         $data['featured_items'] = FeaturedItem::inRandomOrder()->take(6)->get();
 
         $totalAdverts = InnovationCategory::count();
-        $users = Innovation::whereNull('is_deleted')->count();
+         $users = Innovation::whereNull('is_deleted')->count();
         $applicants = SuccessStory::whereNull('is_deleted')->count();
         $applications = Publication::whereNull('is_deleted')->count();
 
@@ -135,6 +136,11 @@ class AboutUs extends Controller
             ->leftJoin('value_chains as v', 'v.id', '=', 'innovations.value_chain_id')
             ->join('counties as c', 'c.id', '=', 'innovations.county_id')
             ->orderBy('innovations.created_at', 'desc') // Order by created_at column in descending order
+            ->when($search, function($q) use($search) {
+                return $q->where('inno_name', 'Like', "%{$search}%")
+                            ->orWhere('inno_description', 'Like', "%{$search}%")
+                            ->orWhere('vco_name', 'Like', "%{$search}%");
+            })
             ->paginate(12);
 
         $inovations->transform(function ($inovation) {
