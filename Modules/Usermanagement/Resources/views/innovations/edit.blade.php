@@ -253,15 +253,13 @@
                                         <img name="images" width="220" height="350" id="image_array1"
                                             value="" src="/uploads/{{ $model->inno_cover_image }}"
                                             style="width: 100%;height: 250px;" />
-                                        <!--<div id="image_array1"   ></div> Use This if You want to display Multiple Images-->
                                         <input type="hidden" class="form-control validate" name="primary_image"
                                             value="" id="img_id_cover" required>
                                         <br />
-                                        <a href="#modal-message" class="uploadmodalwidget btn btn-default btn-sm"
+                                        {{-- <a href="#modal-message" class="uploadmodalwidget btn btn-default btn-sm"
                                             data-toggle="modal" id="uploadmodal" data-inputid="img_id_cover"
                                             data-mode="single" data-divid="image_array1"
-                                            style="position: absolute;z-index: 1;">Upload Image</a>
-                                        <!-- Change Data Mode to Multiple if you want to be able to select Multiple Images -->
+                                            style="position: absolute;z-index: 1;">Upload Image</a> --}}
 
                                     </div>
 
@@ -330,10 +328,10 @@
                                     <input type="hidden" class="form-control validate" name="primary_images[]"
                                         id="img_ids1" required>
                                     <br />
-                                    <a href="#modal-message" class="uploadmodalwidget btn btn-default btn-sm"
+                                    {{-- <a href="#modal-message" class="uploadmodalwidget btn btn-default btn-sm"
                                         data-toggle="modal" id="uploadmodal" data-inputid="img_ids1"
                                         data-mode="multiple" data-divid="image_array11"
-                                        style="position: absolute;z-index: 1;">Upload Image</a>
+                                        style="position: absolute;z-index: 1;">Upload Image</a> --}}
                                     <!-- Change Data Mode to Multiple if you want to be able to select Multiple Images -->
 
 
