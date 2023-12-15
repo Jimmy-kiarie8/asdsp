@@ -91,25 +91,5 @@
 </div>
 
 
-
-<script>
-    function initMap() {
-        var mapOptions = {
-            zoom: 8,
-            center: { lat: 0.8041, lng: 36.5355 } // Default center of the map
-        };
-
-        var map = new google.maps.Map(document.getElementById('map1'), mapOptions);
-
-        @json($locations).forEach(function (location) {
-            new google.maps.Marker({
-                position: { lat: parseFloat(location.inno_longitude), lng: parseFloat(location.inno_latitude) },
-                map: map
-            });
-        });
-    }
-</script>
-
-
 @include('pages.inc.footer')
 @endsection

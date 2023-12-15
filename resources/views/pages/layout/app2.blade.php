@@ -293,9 +293,29 @@
 
 <body>
     @yield('content')
+    
+    <script>
+        function initMap1() {
+            var mapOptions = {
+                zoom: 8,
+                center: { lat: 0.8041, lng: 36.5355 } // Default center of the map
+            };
+
+            var map = new google.maps.Map(document.getElementById('map1'), mapOptions);
+
+            @json($locations).forEach(function (location) {
+                new google.maps.Marker({
+                    position: { lat: parseFloat(location.inno_longitude), lng: parseFloat(location.inno_latitude) },
+                    map: map
+                });
+            });
+        }
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&callback=initMap1"></script>
+
 </body>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&callback=initMap">
 </script>
 
 </html>
