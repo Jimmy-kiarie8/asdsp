@@ -118,55 +118,34 @@
                 <h2 class="mb-4 text-2xl tracking-tight font-extrabold text-gray-900 light:text-white">
                     LATEST NEWS
                 </h2>
-                <p class="text-gray-500 sm:text-xl light:text-gray-400">Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit. Obcaecati, consequatur culpa dolor rerum necessitatibus
-                    dolorem, odit, quas temporibus amet nam similique minima accusantium itaque quo dolores.
-                    Asperiores quaerat rem nisi!</p>
+                <p class="text-gray-500 sm:text-xl light:text-gray-400">The programme is implemented by the Government of Kenya (National and 47 county governments) with strong participation of the private sector as direct beneficiaries or service providers. It is financed by the Government of Kenya, Sida and EU for a period of five years (2017-2022).</p>
             </div>
             <hr>
-            <a href="#"
-                class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 light:border-gray-700 light:bg-gray-800 light:hover:bg-gray-700">
-                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                    src="/docs/images/blog/image-4.jpg" alt="">
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 light:text-white">Noteworthy
-                        technology
-                        acquisitions 2021</h5>
-                    <p class="mb-3 font-normal text-gray-700 light:text-gray-400">Here are the biggest enterprise
-                        technology
-                        acquisitions of 2021 so far, in reverse chronological order.</p>
-                </div>
-            </a>
 
 
-            <a href="#"
-                class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 light:border-gray-700 light:bg-gray-800 light:hover:bg-gray-700">
-                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                    src="/docs/images/blog/image-4.jpg" alt="">
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 light:text-white">Noteworthy
-                        technology
-                        acquisitions 2021</h5>
-                    <p class="mb-3 font-normal text-gray-700 light:text-gray-400">Here are the biggest enterprise
-                        technology
-                        acquisitions of 2021 so far, in reverse chronological order.</p>
-                </div>
-            </a>
+            <ol class="relative border-s border-gray-200 light:border-gray-700">
+                @foreach ($publications as $item)
+                <li class="mb-10 ms-6">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white light:ring-gray-900 light:bg-blue-900">
+                        <svg class="w-2.5 h-2.5 text-blue-800 light:text-blue-300" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </span>
+                    <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 light:text-white">{{$item->vco_name}}<span
+                            class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded light:bg-blue-900 light:text-blue-300 ms-3">Latest</span>
+                    </h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400 light:text-gray-500">Released on
+                        {{ Carbon\Carbon::parse($item->created_at)->format('D M d Y') }}</time>
+                    <p class="mb-4 text-base font-normal text-gray-500 light:text-gray-400">{{$item->strory_description}}</p>
+                </li>
+                
+                @endforeach
+            </ol>
 
 
-            <a href="#"
-                class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 light:border-gray-700 light:bg-gray-800 light:hover:bg-gray-700">
-                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                    src="/docs/images/blog/image-4.jpg" alt="">
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 light:text-white">Noteworthy
-                        technology
-                        acquisitions 2021</h5>
-                    <p class="mb-3 font-normal text-gray-700 light:text-gray-400">Here are the biggest enterprise
-                        technology
-                        acquisitions of 2021 so far, in reverse chronological order.</p>
-                </div>
-            </a>
 
 
         </div>
