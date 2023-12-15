@@ -62,97 +62,110 @@
         </div>
 
 
-        <form class="flex items-center" method="GET" action="{{ route('innovation-list') }}">   
+        <form class="flex items-center" method="GET" action="{{ route('innovation-list') }}">
             <label for="simple-search" class="sr-only">Search</label>
             <div class="relative w-full">
-                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none" style="margin-left: 10px;">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                     </svg>
                 </div>
-                <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Innovation ..." required name="search">
+                <input type="text" style="border-radius: 30px;padding-left: 30px;"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search Innovation ..." required name="search">
             </div>
-            <button type="submit" class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            <button type="submit"
+                class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                 </svg>
                 <span class="sr-only">Search</span>
             </button>
         </form>
 
-        
+
         <div class="main">
             <section class="bg-white light:bg-gray-900" style="border-radius: 70px 70px 0 0;">
                 <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-6 lg:px-6">
-        <div id="header-line"></div>
-                   
+                    <div id="header-line"></div>
+
                     <div id="container">
 
                         <div id="column1">
-                            <h2 class="mb-4 text-2xl tracking-tight font-extrabold text-gray-900 light:text-white">ASDPS TIMPs Portal</h2>
+                            <h2 class="mb-4 text-2xl tracking-tight font-extrabold text-gray-900 light:text-white">ASDPS
+                                TIMPs Portal</h2>
                         </div>
                         <div id="column2">
-                            <p>The ASDSP Innovation portal is an online knowledge repository that provides a single access point for discovery, acquisition and sharing of information about innovations, technologies, and best practices. 
-                            The repository offers an opportunity to promote participatory innovation development by the value chain actors by encouraging ‘VCA-led experimentation’ and the integration of farming communities into innovation systems. 
-                            The idea is to foster knowledge sharing among value chain actors and other innovation actors, encouraging value chain actors to compare and share their experiences and to experiment more critically.</p>
+                            <p>The ASDSP Innovation portal is an online knowledge repository that provides a single access
+                                point for discovery, acquisition and sharing of information about innovations, technologies,
+                                and best practices.
+                                The repository offers an opportunity to promote participatory innovation development by the
+                                value chain actors by encouraging ‘VCA-led experimentation’ and the integration of farming
+                                communities into innovation systems.
+                                The idea is to foster knowledge sharing among value chain actors and other innovation
+                                actors, encouraging value chain actors to compare and share their experiences and to
+                                experiment more critically.</p>
                         </div>
                     </div>
 
 
 
                     <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-                      @foreach ($inovations as $item)
-                          
-                          <div>
+                        @foreach ($inovations as $item)
+                            <div>
 
 
-                              <div
-                                  class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                  
-                                  <a href="#">
-                                      <img class="rounded-t-lg"
-                                          src="{{ $item->inno_cover_image }}"
-                                          alt="" id="innovation-img"/>
-                                  </a>
-                                  <div class="p-5" id="hover-green">
-                                      <div style="height: 200px;">
-                                      <a href="#">
-                                          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"  id="line-breaks">
-                                              {{$item->inno_name}}</h5>
-                                      </a>
-                                      <div class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="line-breaks">
-                                          <p  id="p-breaks">{!! $item->inno_description !!}</p>
-                                      </div>
-                                      </div>
-                                      
-                                      <a href="{{ route('innovationdetails', $item->id) }}"
-                                          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-                                          Read more
-                                          <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                              fill="none" viewBox="0 0 14 10">
-                                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                  stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                          </svg>
-                                      </a>
-                                  </div>
-                              </div>
+                                <div
+                                    class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
-                          </div>
-                          @endforeach
+                                    <a href="#">
+                                        <img class="rounded-t-lg" src="{{ $item->inno_cover_image }}" alt=""
+                                            id="innovation-img" />
+                                    </a>
+                                    <div class="p-5" id="hover-green">
+                                        <div style="height: 200px;">
+                                            <a href="#">
+                                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                                                    id="line-breaks">
+                                                    {{ $item->inno_name }}</h5>
+                                            </a>
+                                            <div class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="line-breaks">
+                                                <p id="p-breaks">{!! $item->inno_description !!}</p>
+                                            </div>
+                                        </div>
+
+                                        <a href="{{ route('innovationdetails', $item->id) }}"
+                                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                                            Read more
+                                            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        @endforeach
 
                     </div>
                     <div style="height: 30px;"></div>
                     <div id="header-line"></div>
 
-          <a href="{{ route('innovation-list') }}" style="margin-left: 45%;" 
-              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-              Load more
-              <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="none" viewBox="0 0 14 10">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                      stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-              </svg>
-          </a>
+                    <a href="{{ route('innovation-list') }}" style="margin-left: 45%;"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                        Load more
+                        <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
                 </div>
             </section>
 
@@ -209,7 +222,7 @@
                     </div>
                     <!-- Item 2 -->
                     <div class="hidden duration-200 ease-linear" data-carousel-item="active">
-                         <div class="grid grid-cols-6 md:grid-cols-6">
+                        <div class="grid grid-cols-6 md:grid-cols-6">
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
                                     src="https://www.shutterstock.com/shutterstock/photos/1811041534/display_1500/stock-vector-this-is-logo-of-county-in-republic-of-kenya-1811041534.jpg"
@@ -287,16 +300,22 @@
             <section class="bg-white light:bg-gray-900" id="section3">
                 <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div class="font-light text-gray-500 sm:text-lg light:text-gray-400">
-                        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 light:text-white">Welcome to ASDPS TIMPs Portal</h2>
-                        <p class="mb-4">Agriculture Sector Development Support Programme Phase Two (ASDSP II) is one of the key programmes designed by the Ministry of Agriculture, Livestock, Fisheries and Cooperatives and 47 county governments to contribute to addressing food and nutrition security and promote manufacturing. It is primarily designed to enhance the capacity of different Priority Value Chain Actors at different levels to tackle the problems that hinder commercialization of Agriculture.</p>
-                        <p>The programme is implemented by the Government of Kenya (National and 47 county governments) with strong participation of the private sector as direct beneficiaries or service providers. It is financed by the Government of Kenya, Sida and EU for a period of five years (2017-2022).</p>
+                        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 light:text-white">Welcome to
+                            ASDPS TIMPs Portal</h2>
+                        <p class="mb-4">Agriculture Sector Development Support Programme Phase Two (ASDSP II) is one of
+                            the key programmes designed by the Ministry of Agriculture, Livestock, Fisheries and
+                            Cooperatives and 47 county governments to contribute to addressing food and nutrition security
+                            and promote manufacturing. It is primarily designed to enhance the capacity of different
+                            Priority Value Chain Actors at different levels to tackle the problems that hinder
+                            commercialization of Agriculture.</p>
+                        <p>The programme is implemented by the Government of Kenya (National and 47 county governments) with
+                            strong participation of the private sector as direct beneficiaries or service providers. It is
+                            financed by the Government of Kenya, Sida and EU for a period of five years (2017-2022).</p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 mt-8">
-                        <img class="w-full rounded-lg"
-                            src="{{ asset('/media/1.jpeg') }}"
-                            alt="office content 1" style="    height: 310px;">
-                        <img class="mt-4 w-full lg:mt-10 rounded-lg"
-                            src="{{ asset('/media/3.jpeg') }}"
+                        <img class="w-full rounded-lg" src="{{ asset('/media/1.jpeg') }}" alt="office content 1"
+                            style="    height: 310px;">
+                        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="{{ asset('/media/3.jpeg') }}"
                             alt="office content 2" style="    height: 310px;">
                     </div>
                 </div>
@@ -323,7 +342,9 @@
             font-weight: bold;">
                         We invest in Kenyans potential</h4>
                     <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
-                        style="color: #000">ASDSP II is operating under a devolved system of government. The Agriculture sector recognized this and developed a consultation and cooperation mechanism to promote good working relationship between the two levels.</p>
+                        style="color: #000">ASDSP II is operating under a devolved system of government. The Agriculture
+                        sector recognized this and developed a consultation and cooperation mechanism to promote good
+                        working relationship between the two levels.</p>
                     <div
                         class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
 
@@ -433,34 +454,36 @@
                     </div>
                     <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:space-y-0" style="    gap: 0.5rem">
                         @foreach ($successStories as $item)
-                            
-                        <div>
-                            <div
-                                class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <a href="#">
-                                    <img class="rounded-t-lg"
-                                        src="http://197.156.140.250:1080/sites/default/files/styles/height/public/2023-06/solar%20%281%29.jpg?itok=HWAobr5t"
-                                        alt="" />
-                                </a>
-                                <div class="p-5" id="hover-green">
+                            <div>
+                                <div
+                                    class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                                     <a href="#">
-                                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                            {{ $item->vco_name }}</h5>
+                                        <img class="rounded-t-lg"
+                                            src="http://197.156.140.250:1080/sites/default/files/styles/height/public/2023-06/solar%20%281%29.jpg?itok=HWAobr5t"
+                                            alt="" />
                                     </a>
-                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $item->strory_description }}</p>
-                                    <small>{{ ($item->created_at)->diffForHumans() }}</small>
-                                    <a href="#"
-                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-                                        Read more
-                                        <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
+                                    <div class="p-5" id="hover-green">
+                                        <a href="#">
+                                            <h5
+                                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                                {{ $item->vco_name }}</h5>
+                                        </a>
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                            {{ $item->strory_description }}</p>
+                                        <small>{{ $item->created_at->diffForHumans() }}</small>
+                                        <a href="#"
+                                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                                            Read more
+                                            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
 
                     </div>

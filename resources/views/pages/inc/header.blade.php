@@ -143,6 +143,11 @@
 
                   <li id=""
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-15">
+                    <a href="{{ route('about-us') }}" aria-current="page">ABOUT US</a>
+                  </li>
+
+                  <li id=""
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-15">
                     <a href="#" aria-current="page">CONTACT</a>
                   </li>
 

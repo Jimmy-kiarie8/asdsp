@@ -122,7 +122,7 @@ Route::get('/innovation-list_', function () {
     return  view('frontend.home',$data);
 })->name('innovation-list_');
 
-Route::any('/aboutus','\App\Http\Controllers\AboutUs@Index');
+Route::any('/aboutus','\App\Http\Controllers\AboutUs@Index')->name('about-us');
 Route::any('/partners','\App\Http\Controllers\AboutUs@Partners');
 Route::any('/faqs','\App\Http\Controllers\AboutUs@faqs');
 Route::any('/innovations','\App\Http\Controllers\AboutUs@innovations')->name('innovations');

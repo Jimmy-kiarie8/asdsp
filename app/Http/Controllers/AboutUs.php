@@ -21,7 +21,8 @@ class AboutUs extends Controller
     public function Index()
     {
         $data['page_title'] = "About Us";
-        return view("frontend.aboutus", $data);
+        return view("pages.about", $data);
+        // return view("frontend.aboutus", $data);
     }
 
     public function Partners()

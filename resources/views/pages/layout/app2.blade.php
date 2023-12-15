@@ -10,8 +10,9 @@
     <!-- <link rel='stylesheet' id='pearl-theme-styles-css'
     href='https://plantprotection.kilimo.go.ke/wp-content/themes/pearl/assets/css/app.css?ver=3.3.7' type='text/css'
     media='all' /> -->
-    <link rel="stylesheet" href="https://mag.co.ke/apps/public/css/style.css">
-    <link rel="stylesheet" href="https://mag.co.ke/apps/public/css/main.css">
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
     <link rel='stylesheet' id='stm_default_google_font-css'
         href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C200%2C300%2C400%2C400i%2C500%2C600%2C700%2C800%2C900%7CRoboto%3A100%2C200%2C300%2C400%2C400i%2C500%2C600%2C700%2C800%2C900&#038;ver=3.3.7#038;subset=latin%2Clatin-ext'
