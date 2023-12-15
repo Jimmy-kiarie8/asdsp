@@ -128,8 +128,8 @@ Route::any('/faqs','\App\Http\Controllers\AboutUs@faqs');
 Route::any('/innovations','\App\Http\Controllers\AboutUs@innovations')->name('innovations');
 Route::any('/successstories','\App\Http\Controllers\AboutUs@successstories');
 Route::any('/SuccessStories/Details/{id}','InnovationController@Details');
-Route::any('/publications','\App\Http\Controllers\AboutUs@publications');
-Route::any('/contactus','\App\Http\Controllers\AboutUs@contactus');
+Route::any('/publications','\App\Http\Controllers\AboutUs@publications')->name('publications');
+Route::any('/contactus','\App\Http\Controllers\AboutUs@contactus')->name('contact-us');
 Route::any('/innovationdetails/{id}','\App\Http\Controllers\AboutUs@innovationdetails')->name('innovationdetails');
 
 

@@ -157,7 +157,7 @@ class AboutUs extends Controller
 
         $data['page_title'] = "Success Stories";
 
-        $data['valuechains'] = ValueChain::all();
+         $data['valuechains'] = ValueChain::all();
 
         $data['innovations'] = SuccessStory::whereNull('is_deleted')->get();
         $data['counties'] = County::all();
@@ -168,7 +168,9 @@ class AboutUs extends Controller
     public function publications()
     {
         $data['page_title'] = "Publications";
-        return view("pages.publications", $data);
+
+        $publications = SuccessStory::paginate();
+        return view("pages.publications", compact('data', 'publications'));
         return view("frontend.publications", $data);
     }
 

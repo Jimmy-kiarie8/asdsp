@@ -132,7 +132,7 @@
                     <ul class="sub-menu">
                       <li id=""
                         class="menu-item menu-item-type-post_type menu-item-object-page  stm_mega_cols_inside_default">
-                        <a href="#">Publications</a>
+                        <a href="{{ route('publications') }}">Publications</a>
                       </li>
                       <li id=""
                         class="menu-item menu-item-type-post_type menu-item-object-page  stm_mega_cols_inside_default">
@@ -148,7 +148,7 @@
 
                   <li id=""
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-15">
-                    <a href="#" aria-current="page">CONTACT</a>
+                    <a href="{{ route('contact-us') }}" aria-current="page">CONTACT</a>
                   </li>
 
                   <li id=""

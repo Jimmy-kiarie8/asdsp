@@ -1,207 +1,177 @@
-@extends('pages.layout.app')
+@extends('pages.layout.app2')
 @section('content')
-<div id="wrapper">
-
     @include('pages.inc.header')
+
+
+    <section
+        class="bg-white dark:bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] dark:bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative">
+            <a href="#"
+                class="inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm text-green-700 bg-green-100 rounded-full dark:bg-green-900 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800">
+                <span class="text-xs bg-green-600 rounded-full text-white px-4 py-1.5 me-3">ASDSP</span> <span
+                    class="text-sm font-medium">Be part of Kenya's agricultural revolution. Together, we grow.</span>
+                <svg class="w-2.5 h-2.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+            </a>
+            <h1
+                class="mb-4 text-xl font-extrabold tracking-tight leading-none text-gray-900 md:text-2xl lg:text-5xl dark:text-white">
+                Welcome to the Agriculture Sector Development Support Programme (ASDSP)</h1>
+            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200">At ASDSP, our
+                goal is not just to change the face of Kenyan agriculture but to uplift the lives of millions of Kenyans
+                through sustainable and profitable agricultural practices.</p>
+            <form class="w-full max-w-md mx-auto" style="background: transparent">
+                <label for="default-email" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Email
+                    sign-up</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 rtl:inset-x-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                            <path
+                                d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                            <path
+                                d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                        </svg>
+                    </div>
+                    <input type="email" id="default-email"
+                        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="Enter your email here..." required>
+                    <button type="submit"
+                        class="text-white absolute end-2.5 bottom-2.5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Sign
+                        up</button>
+                </div>
+            </form>
+        </div>
+        <div class="bg-gradient-to-b from-green-50 to-transparent dark:from-green-900 w-full h-full absolute top-0 left-0 z-0"
+            style="    height: 545px;">
+        </div>
+    </section>
 
 
     <div class="container1">
         <div class="column1">
-  
-          <!-- Add more blog posts here -->
-          <section class="bg-white dark:bg-gray-900" style="background: #f0f0f0;">
-            <div class="py-8 px-4 mx-auto max-w-full lg:py-16 lg:px-12">
-              <div class="text-center">
-                <a href="#"
-                  class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
-                  role="alert">
-                  <span class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3">New</span> <span
-                    class="text-sm font-medium">Publications! See what's new</span>
-                  <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                </a>
-                <h1
-                  class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-                  Featured News</h1>
-                <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Dolores est placeat delectus deleniti dicta iste
-                  ratione ullam eius, minima ad corrupti explicabo odit.</p>
-              </div>
-              <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-                <div>
-  
-  
-                  <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                      <img class="rounded-t-lg"
-                        src="http://197.156.140.250:1080/sites/default/files/styles/height/public/2023-06/solar%20%281%29.jpg?itok=HWAobr5t"
-                        alt="" />
-                    </a>
-                    <div class="p-5" id="hover-green">
-                      <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Blog Title</h5>
-                      </a>
-                      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur,
-                        adipisicing elit. Ea obcaecati voluptates facilis maiores dolore ullam, cupiditate nesciunt.
-                        Minima amet suscipit consequuntur sit harum, ut fugiat nulla rerum, vero magnam aspernatur.</p>
-                      <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-                        Read more
-                        <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                          viewBox="0 0 14 10">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                      </a>
+
+            <!-- Add more blog posts here -->
+            <section class="bg-white light:bg-gray-900" style="background: #f0f0f0;">
+                <div class="py-8 px-4 mx-auto max-w-full lg:py-16 lg:px-12">
+                    <div class="text-center">
+                        <a href="#"
+                            class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full light:bg-gray-800 light:text-white hover:bg-gray-200 light:hover:bg-gray-700"
+                            role="alert">
+                            <span class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3">New</span>
+                            <span class="text-sm font-medium">Publications! See what's new</span>
+                            <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <h1
+                            class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl light:text-white">
+                            Featured News</h1>
+                        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 light:text-gray-400">
+                            We transform Kenya's agricultural landscape by fostering food and nutrition security and
+                            promoting innovative agricultural practices.</p>
                     </div>
-                  </div>
-  
-                </div>
-                <div>
-  
-  
-                  <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                      <img class="rounded-t-lg"
-                        src="http://197.156.140.250:1080/sites/default/files/styles/height/public/2023-06/nyeri%20%281%29.jpg?itok=p2cRWfo3"
-                        alt="" />
-                    </a>
-                    <div class="p-5" id="hover-green">
-                      <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Blog Title</h5>
-                      </a>
-                      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur,
-                        adipisicing elit. Ea obcaecati voluptates facilis maiores dolore ullam, cupiditate nesciunt.
-                        Minima amet suscipit consequuntur sit harum, ut fugiat nulla rerum, vero magnam aspernatur.</p>
-                      <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-                        Read more
-                        <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                          viewBox="0 0 14 10">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                      </a>
+                    <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+                        @foreach ($publications as $item)
+                            <div>
+
+
+                                <div
+                                    class="bg-white border border-gray-200 rounded-lg shadow light:bg-gray-800 light:border-gray-700">
+                                    <a href="#">
+                                        <img class="rounded-t-lg" src="/uploads/{{ $item->story_cover_image }}"
+                                            alt="" />
+                                    </a>
+                                    <div class="p-5" id="hover-green">
+                                        <a href="#">
+                                            <h5
+                                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 light:text-white">
+                                                {{ $item->vco_name }}</h5>
+                                        </a>
+                                        <p class="mb-3 font-normal text-gray-700 light:text-gray-400">
+                                            {{ $item->strory_description }}</p>
+                                        <a href="#"
+                                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 light:bg-green-600 light:hover:bg-green-700 light:focus:ring-green-800">
+                                            Read more
+                                            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        @endforeach
                     </div>
-                  </div>
                 </div>
-                <div>
-  
-  
-                  <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                      <img class="rounded-t-lg"
-                        src="http://197.156.140.250:1080/sites/default/files/styles/height/public/2023-06/homabay.png?itok=Ktdh2Y2H"
-                        alt="" />
-                    </a>
-                    <div class="p-5" id="hover-green">
-                      <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Blog Title</h5>
-                      </a>
-                      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur,
-                        adipisicing elit. Ea obcaecati voluptates facilis maiores dolore ullam, cupiditate nesciunt.
-                        Minima amet suscipit consequuntur sit harum, ut fugiat nulla rerum, vero magnam aspernatur.</p>
-                      <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-                        Read more
-                        <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                          viewBox="0 0 14 10">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div>
-  
-  
-                  <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                      <img class="rounded-t-lg"
-                        src="http://197.156.140.250:1080/sites/default/files/styles/height/public/2023-06/homabay.png?itok=Ktdh2Y2H"
-                        alt="" />
-                    </a>
-                    <div class="p-5" id="hover-green">
-                      <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Blog Title</h5>
-                      </a>
-                      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur,
-                        adipisicing elit. Ea obcaecati voluptates facilis maiores dolore ullam, cupiditate nesciunt.
-                        Minima amet suscipit consequuntur sit harum, ut fugiat nulla rerum, vero magnam aspernatur.</p>
-                      <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-                        Read more
-                        <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                          viewBox="0 0 14 10">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+            </section>
         </div>
         <div class="column2">
-          <div class="max-w-screen-md mb-8 lg:mb-16">
-            <h2 class="mb-4 text-2xl tracking-tight font-extrabold text-gray-900 light:text-white">
-              LATEST NEWS
-            </h2>
-            <p class="text-gray-500 sm:text-xl light:text-gray-400">Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Obcaecati, consequatur culpa dolor rerum necessitatibus
-              dolorem, odit, quas temporibus amet nam similique minima accusantium itaque quo dolores.
-              Asperiores quaerat rem nisi!</p>
-          </div>
-          <hr>
-          <a href="#"
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-              src="/docs/images/blog/image-4.jpg" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-                acquisitions 2021</h5>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-                acquisitions of 2021 so far, in reverse chronological order.</p>
+            <div class="max-w-screen-md mb-8 lg:mb-16">
+                <h2 class="mb-4 text-2xl tracking-tight font-extrabold text-gray-900 light:text-white">
+                    LATEST NEWS
+                </h2>
+                <p class="text-gray-500 sm:text-xl light:text-gray-400">Lorem ipsum dolor sit amet
+                    consectetur, adipisicing elit. Obcaecati, consequatur culpa dolor rerum necessitatibus
+                    dolorem, odit, quas temporibus amet nam similique minima accusantium itaque quo dolores.
+                    Asperiores quaerat rem nisi!</p>
             </div>
-          </a>
-  
-  
-          <a href="#"
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-              src="/docs/images/blog/image-4.jpg" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-                acquisitions 2021</h5>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-                acquisitions of 2021 so far, in reverse chronological order.</p>
-            </div>
-          </a>
-  
-  
-          <a href="#"
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-              src="/docs/images/blog/image-4.jpg" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-                acquisitions 2021</h5>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-                acquisitions of 2021 so far, in reverse chronological order.</p>
-            </div>
-          </a>
-  
-  
+            <hr>
+            <a href="#"
+                class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 light:border-gray-700 light:bg-gray-800 light:hover:bg-gray-700">
+                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                    src="/docs/images/blog/image-4.jpg" alt="">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 light:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    <p class="mb-3 font-normal text-gray-700 light:text-gray-400">Here are the biggest enterprise
+                        technology
+                        acquisitions of 2021 so far, in reverse chronological order.</p>
+                </div>
+            </a>
+
+
+            <a href="#"
+                class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 light:border-gray-700 light:bg-gray-800 light:hover:bg-gray-700">
+                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                    src="/docs/images/blog/image-4.jpg" alt="">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 light:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    <p class="mb-3 font-normal text-gray-700 light:text-gray-400">Here are the biggest enterprise
+                        technology
+                        acquisitions of 2021 so far, in reverse chronological order.</p>
+                </div>
+            </a>
+
+
+            <a href="#"
+                class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 light:border-gray-700 light:bg-gray-800 light:hover:bg-gray-700">
+                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                    src="/docs/images/blog/image-4.jpg" alt="">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 light:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    <p class="mb-3 font-normal text-gray-700 light:text-gray-400">Here are the biggest enterprise
+                        technology
+                        acquisitions of 2021 so far, in reverse chronological order.</p>
+                </div>
+            </a>
+
+
         </div>
-      </div>
+    </div>
 
-</div>
 
-@include('pages.inc.footer')
+    @include('pages.inc.footer')
 @endsection
