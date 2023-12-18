@@ -91,9 +91,14 @@ class AboutUs extends Controller
         $data['innovations'] = Innovation::whereNull('is_deleted')->take(10)->get();
         $data['counties'] = County::all();
         $data['nodes'] = NodeType::all();
+        $search = request('search');
 
 
-        $locations = Innovation::whereNotNull('inno_latitude')->whereNotNull('inno_longitude')->select('inno_latitude', 'inno_longitude', 'inno_description', 'inno_name')->paginate(8);
+        $locations = Innovation::whereNotNull('inno_latitude')->whereNotNull('inno_longitude')->select('inno_latitude', 'inno_longitude', 'inno_description', 'inno_name')->when($search, function($q) use($search) {
+            return $q->where('inno_name', 'Like', "%{$search}%")
+                        ->orWhere('inno_description', 'Like', "%{$search}%")
+                        ->orWhere('vco_name', 'Like', "%{$search}%");
+        })->paginate(8);
 
 
 
@@ -162,7 +167,8 @@ class AboutUs extends Controller
         $data['innovations'] = SuccessStory::whereNull('is_deleted')->get();
         $data['counties'] = County::all();
         $data['nodes'] = NodeType::all();
-        return view("frontend.successstories", $data);
+        $publications = SuccessStory::paginate();
+        return view("pages.publications", compact('data', 'publications'));
     }
 
     public function publications()

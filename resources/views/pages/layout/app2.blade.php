@@ -18,6 +18,8 @@
         href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C200%2C300%2C400%2C400i%2C500%2C600%2C700%2C800%2C900%7CRoboto%3A100%2C200%2C300%2C400%2C400i%2C500%2C600%2C700%2C800%2C900&#038;ver=3.3.7#038;subset=latin%2Clatin-ext'
         type='text/css' media='all' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -294,28 +296,9 @@
 <body>
     @yield('content')
     
-    <script>
-        function initMap1() {
-            var mapOptions = {
-                zoom: 8,
-                center: { lat: 0.8041, lng: 36.5355 } // Default center of the map
-            };
 
-            var map = new google.maps.Map(document.getElementById('map1'), mapOptions);
-
-            @json($locations).forEach(function (location) {
-                new google.maps.Marker({
-                    position: { lat: parseFloat(location.inno_longitude), lng: parseFloat(location.inno_latitude) },
-                    map: map
-                });
-            });
-        }
-    </script>
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&callback=initMap1"></script>
 
 </body>
 
-</script>
 
 </html>

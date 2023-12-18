@@ -62,32 +62,22 @@
         </div>
 
 
-        <form class="flex items-center" method="GET" action="{{ route('innovation-list') }}">
-            <label for="simple-search" class="sr-only">Search</label>
-            <div class="relative w-full">
-                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none" style="margin-left: 10px;">
-                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                    </svg>
+
+
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative">
+            
+            <form class="w-full max-w-md mx-auto" style="background: transparent" id="search-form"  method="GET" action="{{ route('innovation-list') }}">
+                <label for="default-email" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search...</label>
+                <div class="relative">
+                   
+                    <input type="text" id="default-email"
+                        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="Search..." required name="search">
+                    <button type="submit" style="margin-left: 22%;margin-bottom: -1px;"
+                        class="text-white absolute end-2.5 bottom-2.5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Search</button>
                 </div>
-                <input type="text" style="border-radius: 30px;padding-left: 30px;"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Search Innovation ..." required name="search">
-            </div>
-            <button type="submit"
-                class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 20 20">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                </svg>
-                <span class="sr-only">Search</span>
-            </button>
-        </form>
-
-
+            </form>
+        </div>
         <div class="main">
             <section class="bg-white light:bg-gray-900" style="border-radius: 70px 70px 0 0;">
                 <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-6 lg:px-6">
@@ -184,10 +174,10 @@
                 </div>
 
                 <!-- Carousel wrapper -->
-                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96" id="counties">
                     <!-- Item 1 -->
                     <div class="hidden duration-200 ease-linear" data-carousel-item="active">
-                        <div class="grid grid-cols-6 md:grid-cols-6">
+                        <div class="grid grid-cols-6 grid-cols-2 md:grid-cols-6 sm:grid-cols-2">
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
                                     src="https://www.shutterstock.com/shutterstock/photos/1811041534/display_1500/stock-vector-this-is-logo-of-county-in-republic-of-kenya-1811041534.jpg"
@@ -222,7 +212,7 @@
                     </div>
                     <!-- Item 2 -->
                     <div class="hidden duration-200 ease-linear" data-carousel-item="active">
-                        <div class="grid grid-cols-6 md:grid-cols-6">
+                        <div class="grid grid-cols-6 grid-cols-2 md:grid-cols-6 sm:grid-cols-2">
                             <div>
                                 <img class="h-auto max-w-full rounded-lg"
                                     src="https://www.shutterstock.com/shutterstock/photos/1811041534/display_1500/stock-vector-this-is-logo-of-county-in-republic-of-kenya-1811041534.jpg"
@@ -341,6 +331,7 @@
                     <h4 style="    font-size: 38px;
             font-weight: bold;">
                         We invest in Kenyans potential</h4>
+                        <br>
                     <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
                         style="color: #000">ASDSP II is operating under a devolved system of government. The Agriculture
                         sector recognized this and developed a consultation and cooperation mechanism to promote good
