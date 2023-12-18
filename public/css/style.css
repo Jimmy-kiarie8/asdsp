@@ -10888,6 +10888,32 @@ footer .max-w-6xl {
 
 }
 
+#footer {
+  background: #14532d !important; /* Fallback color */
+
+}
+/* #footer {
+  position: relative;
+  padding: 40px 60px;
+  background: #14532d !important; 
+  background-image: url(http://localhost:8000/media/grow.gif) !important;
+  background-repeat: no-repeat;
+  background-size: cover !important; 
+}
+
+#footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7) !important;
+  z-index: -1; 
+} */
+
+
+
 @media (max-width: 767.98px) {
   #wrapper {
     width: 100% !important;
