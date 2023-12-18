@@ -97,6 +97,12 @@ class AboutUs extends Controller
         $locations = Innovation::whereNotNull('inno_latitude')->whereNotNull('inno_longitude')->select('inno_latitude', 'inno_longitude', 'inno_description', 'inno_name')->when($search, function($q) use($search) {
             return $q->where('inno_name', 'Like', "%{$search}%")
                         ->orWhere('inno_description', 'Like', "%{$search}%")
+                        ->orWhere('inno_name', 'Like', "%{$search}%")
+                        ->orWhere('innovation_type', 'Like', "%{$search}%")
+                        ->orWhere('inno_location', 'Like', "%{$search}%")
+                        ->orWhere('innovation_status', 'Like', "%{$search}%")
+                        ->orWhere('inno_contactname', 'Like', "%{$search}%")
+                        ->orWhere('inno_sources', 'Like', "%{$search}%")
                         ->orWhere('vco_name', 'Like', "%{$search}%");
         })->paginate(8);
 
