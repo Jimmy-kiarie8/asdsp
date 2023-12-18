@@ -10912,6 +10912,10 @@ footer .max-w-6xl {
   z-index: -1; 
 } */
 
+#mobile {
+  z-index: 1;
+  position: relative;
+}
 
 
 @media (max-width: 767.98px) {
@@ -10936,10 +10940,6 @@ footer .max-w-6xl {
     display: none !important;
   }
 
-  #mobile {
-    z-index: 1;
-    position: relative;
-  }
 
   #map {
     width: 94vw !important;
