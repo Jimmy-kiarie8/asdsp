@@ -123,7 +123,8 @@
                 center: {
                     lat: 0.8041,
                     lng: 36.5355
-                }
+                },
+                mapTypeId: google.maps.MapTypeId.HYBRID // Set the default map type to
             };
 
             var map = new google.maps.Map(document.getElementById('map'), mapOptions);

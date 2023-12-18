@@ -340,32 +340,47 @@
 
 
     </div>
-
     <script>
-        function initMap() {
-            var myLatLng = {
-                lat: {{ $innovation->inno_longitude }},
-                lng: {
-                    {
-                        $innovation - > inno_latitude
-                    }
-                }
-            };
-
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 13,
-                center: myLatLng
-            });
-
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: '{{ $innovation->vco_name }}'
-            });
+        function initMap() { 
+            var uluru = {lat: {{ $innovation->inno_longitude }}, lng: {{ $innovation->inno_latitude }}}; 
+            var map = new google.maps.Map(document.getElementById('map'), { 
+                zoom: 10, 
+                center: uluru,
+                mapTypeId: google.maps.MapTypeId.HYBRID // Set the default map type to
+            }); 
+            var marker = new google.maps.Marker({ 
+                position: uluru, 
+                map: map 
+            }); 
         }
-    </script>
-
-
+        </script>
+        
+{{-- 
+        <script>
+            function initMap() {
+                console.log($innovation);
+                var myLatLng = {
+                    lat: {{ $innovation->inno_longitude }},
+                    lng: {
+                        {
+                            $innovation - > inno_latitude
+                        }
+                    }
+                };
+    
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 13,
+                    center: myLatLng
+                });
+    
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title: '{{ $innovation->vco_name }}'
+                });
+            }
+        </script> --}}
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&callback=initMap"></script>
 
     @include('pages.inc.footer')
 @endsection
