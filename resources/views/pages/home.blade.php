@@ -65,11 +65,13 @@
 
 
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative">
-            
-            <form class="w-full max-w-md mx-auto" style="background: transparent" id="search-form"  method="GET" action="{{ route('innovation-list') }}">
-                <label for="default-email" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search...</label>
+
+            <form class="w-full max-w-md mx-auto" style="background: transparent" id="search-form" method="GET"
+                action="{{ route('innovation-list') }}">
+                <label for="default-email"
+                    class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search...</label>
                 <div class="relative">
-                   
+
                     <input type="text" id="default-email"
                         class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
                         placeholder="Search..." required name="search">
@@ -160,17 +162,11 @@
             </section>
 
 
-
+            {{-- 
             <div id="animation-carousel" class="relative container" data-carousel="static">
                 <h3 class="mb-4 text-2xl tracking-tight font-extrabold text-gray-900 light:text-white text-center">
                     We invest in Kenyans potential</h3>
-                <div
-                    style="height: 3px;
-        background: #348a21;
-        width: 121px;
-        margin: auto;
-        margin-bottom: 15px;
-        margin-top: -10px;">
+                <div style="height: 3px; background: #348a21; width: 121px; margin: auto; margin-bottom: 15px; margin-top: -10px;">
                 </div>
 
                 <!-- Carousel wrapper -->
@@ -273,6 +269,40 @@
                         <span class="sr-only">Next</span>
                     </span>
                 </button>
+            </div> --}}
+
+
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4" id="counties">
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="https://www.shutterstock.com/shutterstock/photos/1811041534/display_1500/stock-vector-this-is-logo-of-county-in-republic-of-kenya-1811041534.jpg"
+                        alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="https://seeklogo.com/images/N/nyeri-county-logo-CD6A94CBC7-seeklogo.com.png" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="https://keproba-bucket.s3.eu-central-1.amazonaws.com/counties/1646128161261639891.png"
+                        alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="https://keproba-bucket.s3.eu-central-1.amazonaws.com/counties/16461338001430511872.png"
+                        alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/06/Coat_of_Arms_of_Bomet_County.png"
+                        alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="https://e7.pngegg.com/pngimages/545/465/png-clipart-taita-taveta-county-kilifi-county-nyeri-county-county-government-of-kwale-county-treasury-narok-county-court-of-arms-kenya-logo-brand.png"
+                        alt="">
+                </div>
             </div>
 
             <div style="height: 30px"></div>
@@ -331,7 +361,7 @@
                     <h4 style="    font-size: 38px;
             font-weight: bold;">
                         We invest in Kenyans potential</h4>
-                        <br>
+                    <br>
                     <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
                         style="color: #000">ASDSP II is operating under a devolved system of government. The Agriculture
                         sector recognized this and developed a consultation and cooperation mechanism to promote good
