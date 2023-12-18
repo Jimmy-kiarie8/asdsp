@@ -7,6 +7,7 @@
 
 
         <div class="main">
+            
             <section class="bg-white light:bg-gray-900" style="border-radius: 70px 70px 0 0;">
                             <div style="height: 260px;
     background-image: url(https://images.pexels.com/photos/1112080/pexels-photo-1112080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
@@ -14,6 +15,19 @@
 
                 <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-6 lg:px-6">
                   
+
+                    <form class="w-full max-w-md mx-auto" style="background: transparent" id="search-form"
+                    method="GET" action="{{ route('innovations') }}">
+                    <label for="default-search"
+                        class="mb-2 text-sm font-medium text-gray-900 sr-only light:text-white">Search...</label>
+                        <div class="mt-6 flex max-w-md gap-x-4">
+                            <label for="search-address" class="sr-only">Search</label>
+                            <input id="search-address" name="search" type="search" autocomplete="search" required class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm sm:leading-6" placeholder="Enter your search">
+                            <button type="submit" class="flex-none rounded-md bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500">Search</button>
+                          </div>
+                </form>
+
+                <br>
                     <div id="container">
 
                         <div id="column1">
