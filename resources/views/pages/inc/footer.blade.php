@@ -1,4 +1,4 @@
-<footer class="bg-gray-800 text-white p-6" style="padding: 40px 60px;">
+<footer class="text-white p-6" id="footer">
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
       <div>
           <h5 class="text-xl font-bold mb-2">ASDSP TIMPS PORTAL</h5>
@@ -15,8 +15,12 @@
       </div>
       <div>
           <h5 class="text-xl font-bold mb-2">CONTACT US</h5>
-          <p>Agricultural Sector Development Support Programme (ASDSP II), Hill Plaza Building 6th Floor Community, along Ngong Road , Nairobi</p>
-          <p class="flex items-center"><i class="fas fa-phone-alt"></i>P. O. Box 30028-00100 Kenya</p>
+          <p> <svg class="w-[14px] h-[14px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+            <path d="M8 0a7.992 7.992 0 0 0-6.583 12.535 1 1 0 0 0 .12.183l.12.146c.112.145.227.285.326.4l5.245 6.374a1 1 0 0 0 1.545-.003l5.092-6.205c.206-.222.4-.455.578-.7l.127-.155a.934.934 0 0 0 .122-.192A8.001 8.001 0 0 0 8 0Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/>
+          </svg> Agricultural Sector Development Support Programme (ASDSP II), Hill Plaza Building 6th Floor Community, along Ngong Road , Nairobi</p>
+          <p class="flex items-center"><svg class="w-[14px] h-[14px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4H1m3 4H1m3 4H1m3 4H1m6.071.286a3.429 3.429 0 1 1 6.858 0M4 1h12a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Zm9 6.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"/>
+          </svg>P. O. Box 30028-00100 Kenya</p>
           <p class="flex items-center"><i class="fas fa-envelope"></i> E-mail:info@asdsp.go.ke</p>
           <p class="flex items-center"><i class="fas fa-envelope"></i> www.asdsp.kilimo.go.ke</p>
 
@@ -24,8 +28,7 @@
         </div>
   </div>
   <br>
-  <hr>
-  <div class="flex justify-between items-center mt-4 border-t border-gray-700 pt-4">
+  <div class="flex justify-between items-center mt-4 border-t border-white-700 pt-4"  id="footer-lower">
       <div>
           <img src="{{ asset('/media/logo.png') }}" alt="Flowbite Logo" class="h-8">
       </div>
