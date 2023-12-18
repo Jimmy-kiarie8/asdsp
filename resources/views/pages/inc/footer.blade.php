@@ -1,11 +1,62 @@
+<footer class="bg-gray-800 text-white p-6" style="padding: 40px 60px;">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div>
+          <h5 class="text-xl font-bold mb-2">ASDSP TIMPS PORTAL</h5>
+          <p>The ASDSP Innovation portal is an online knowledge repository that provides a single access point for discovery, acquisition and sharing of information about innovations, technologies, and best practices.</p>
+      </div>
+      <div>
+          <h5 class="text-xl font-bold mb-2">Links</h5>
+          <li><a href="#" class="mb-4" class="hover:underline">About Us</a></li>
+          <li><a href="#" class="mb-4" class="hover:underline">Partners</a></li>
+          <li><a href="#" class="mb-4" class="hover:underline">FAQs</a></li>
+          <li><a href="#" class="mb-4" class="hover:underline">Gallery</a></li>
+          <li><a href="#" class="mb-4" class="hover:underline">Terms of Use</a></li>
+          <li><a href="#" class="mb-4" class="hover:underline">Privacy Policy</a></li>
+      </div>
+      <div>
+          <h5 class="text-xl font-bold mb-2">CONTACT US</h5>
+          <p>Agricultural Sector Development Support Programme (ASDSP II), Hill Plaza Building 6th Floor Community, along Ngong Road , Nairobi</p>
+          <p class="flex items-center"><i class="fas fa-phone-alt"></i>P. O. Box 30028-00100 Kenya</p>
+          <p class="flex items-center"><i class="fas fa-envelope"></i> E-mail:info@asdsp.go.ke</p>
+          <p class="flex items-center"><i class="fas fa-envelope"></i> www.asdsp.kilimo.go.ke</p>
 
+
+        </div>
+  </div>
+  <br>
+  <hr>
+  <div class="flex justify-between items-center mt-4 border-t border-gray-700 pt-4">
+      <div>
+          <img src="{{ asset('/media/logo.png') }}" alt="Flowbite Logo" class="h-8">
+      </div>
+     
+      <form class="w-full max-w-md mx-auto" style="background: transparent" id="search-form"
+      method="GET" action="{{ route('innovations') }}">
+      <label for="default-email"
+          class="mb-2 text-sm font-medium text-gray-900 sr-only light:text-white">Search...</label>
+      <div class="relative">
+
+          <input type="text" id="default-email"
+              class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+              placeholder="Search..." required name="search">
+          <button type="submit" style="margin-left: 22%;margin-bottom: -1px;" id="footer-button"
+              class="text-white absolute end-2.5 bottom-2.5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Search</button>
+      </div>
+  </form>
+  </div>
+  <div class="text-center text-gray-500 text-sm mt-4">
+      © 2021-{{ date('Y') }} ASDSP™. All Rights Reserved.
+  </div>
+</footer>
+
+
+{{-- 
 <footer class="p-4 bg-white sm:p-6 dark:bg-gray-800">
     <div class="mx-auto max-w-screen-xl">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0" style="width: 30%">
           <a href="" class="flex items-center">
             <img src="{{ asset('/media/logo.png') }}" class="mr-3 h-8" alt="ASDSP" style="width: 200px;height: 150px;" />
-            {{-- <span class="self-center text-2xl font-semibold whitespace-nowrap light:text-white"> ASDSP</span> --}}
           </a>
           <p style="color: #fff; margin-top: 10px">The ASDSP Innovation portal is an online knowledge repository that provides a single access point for discovery, acquisition and sharing of information about innovations, technologies, and best practices.
           </p>
@@ -86,4 +137,4 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> --}}

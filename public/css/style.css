@@ -10815,3 +10815,45 @@ span{font-size:14px;}
    .filter-header{height: 58px;}
    .filter-body{padding-right: 0;}
 }
+
+
+#search-form button, footer #footer-button {
+  margin-left: 24%;
+  margin-bottom: -1px;
+}
+
+footer .max-w-6xl {
+  max-width: 97rem;
+}
+
+
+@media (max-width: 767.98px) {
+  #wrapper {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  #search-form button {
+    margin-left: 22%;
+    margin-bottom: -1px;
+  }
+  #search-form input {
+  }
+
+  #counties .grid-cols-2{
+    grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+  }
+  footer .mb-6 {
+    width: 100% !important;
+  }
+  #innovation-list .column2, #publication .column2 {
+    display: none !important;
+  }
+  #mobile {
+    z-index: 1;
+    position: relative;
+  }
+
+  #map {
+    width: 94vw !important;
+  }
+}

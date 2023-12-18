@@ -44,8 +44,9 @@
                 </div>
             </form>
         </div>
-        <div
-            class="bg-gradient-to-b from-green-50 to-transparent dark:from-green-900 w-full h-full absolute top-0 left-0 z-0">
+
+        <div class="bg-gradient-to-b from-green-50 to-transparent dark:from-green-900 w-full h-full absolute top-0 left-0 z-0"
+            style="height: 800px;" id="overlay">
         </div>
     </section>
 
@@ -70,9 +71,9 @@
                     Ministry of Agriculture, Livestock, Fisheries, and Cooperatives, and county governments. Our initiatives
                     are supported by the Kenyan government, Sida, and the European Union, reflecting a strong commitment to
                     agricultural development.</p>
-                <a href="#"
-                    class="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 light:focus:ring-blue-900">
-                    Read more
+                <a href="{{ route('contact-us') }}"
+                    class="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 light:focus:ring-green-900">
+                    Contact Us
                     <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 14 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
