@@ -124,7 +124,7 @@
                     lat: 0.8041,
                     lng: 36.5355
                 },
-                mapTypeId: google.maps.MapTypeId.HYBRID // Set the default map type to
+                mapTypeId: google.maps.MapTypeId.HYBRID
             };
 
             var map = new google.maps.Map(document.getElementById('map'), mapOptions);
@@ -148,7 +148,7 @@
                 document.querySelectorAll('.hover-green')[index].addEventListener('click', function() {
                     // Zoom out then zoom in
                     smoothZoom(map, 5, map.getZoom(), function() {
-                        smoothZoom(map, 15, map.getZoom(), marker);
+                        smoothZoom(map, 13, map.getZoom(), marker);
                     });
                 });
             });

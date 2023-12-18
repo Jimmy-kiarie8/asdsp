@@ -342,15 +342,16 @@
     </div>
     <script>
         function initMap() { 
-            var uluru = {lat: {{ $innovation->inno_longitude }}, lng: {{ $innovation->inno_latitude }}}; 
+            var center = {lat: {{ $innovation->inno_longitude }}, lng: {{ $innovation->inno_latitude }}}; 
             var map = new google.maps.Map(document.getElementById('map'), { 
                 zoom: 10, 
-                center: uluru,
+                center: center,
                 mapTypeId: google.maps.MapTypeId.HYBRID // Set the default map type to
             }); 
             var marker = new google.maps.Marker({ 
-                position: uluru, 
-                map: map 
+                position: center, 
+                map: map,
+                title: '{{ $innovation->inno_name }}'
             }); 
         }
         </script>
