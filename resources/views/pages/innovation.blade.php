@@ -26,8 +26,8 @@
                                     <div class="relative">
 
                                         <input type="text" id="default-email"
-                                        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 light:bg-gray-800 light:border-gray-700 light:placeholder-gray-400 light:text-white light:focus:ring-green-500 light:focus:border-green-500"
-                                        placeholder="Search..." required>
+                                            class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 light:bg-gray-800 light:border-gray-700 light:placeholder-gray-400 light:text-white light:focus:ring-green-500 light:focus:border-green-500"
+                                            placeholder="Search..." required>
                                         <button type="submit" style="margin-left: 22%;margin-bottom: -1px;"
                                             class="text-white absolute end-2.5 bottom-2.5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 light:bg-green-600 light:hover:bg-green-700 light:focus:ring-green-800">Search</button>
                                     </div>
@@ -201,6 +201,13 @@
         #footer {
             position: relative !important;
             z-index: 10;
+        }
+
+        @media (max-width: 767.98px) {
+
+            #map-container {
+                position: relative !important;
+            }
         }
     </style>
 @endsection
