@@ -41,6 +41,6 @@ class="bg-white dark:bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs
 </div>
 
 <div class="bg-gradient-to-b from-green-50 to-transparent dark:from-green-900 w-full h-full absolute top-0 left-0 z-0"
-    style="height: 800px;" id="overlay">
+    style="height: 700px;" id="overlay">
 </div>
 </section>
