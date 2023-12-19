@@ -5,7 +5,7 @@
         <div
             class="bg-gray-50 light:bg-gray-800 border border-gray-200 light:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
             <a href="#"
-                class="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md light:bg-gray-700 light:text-blue-400 mb-2">
+                class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md light:bg-gray-700 light:text-green-400 mb-2">
                 <svg class="w-2.5 h-2.5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor" viewBox="0 0 20 14">
                     <path
@@ -48,7 +48,7 @@
                     resulting changes that the beneficiaries groups experienced that improved their
                     livelihoods.</p>
                 <a href="/media/docs/NEWSLETTER_12.pdf" target="_blank"
-                    class="text-blue-600 light:text-blue-500 hover:underline font-medium text-lg inline-flex items-center">Read
+                    class="text-green-600 light:text-green-500 hover:underline font-medium text-lg inline-flex items-center">Read
                     more
                     <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -85,7 +85,7 @@
                     heavy rains to reduce losses.</p>
                 <a href="https://www.facebook.com/story.php?story_fbid=pfbid023uZk2Cd95bqFWbTuybERoSY56uxSKrB76AJVPRWV3S3KXpj8AYdAiNxLB4wAYyHQl&id=100069169660599&sfnsn=mo&mibextid=6aamW6&refsrc=deprecated&paipv=0&eav=Afan9ABJ0ahI9wt1_Wv1Qq3tNsveEA44l6QvJtaSnJlebbPndKeJfQor6MUob6OaYLU&_rdr"
                     target="_blank"
-                    class="text-blue-600 light:text-blue-500 hover:underline font-medium text-lg inline-flex items-center">Read
+                    class="text-green-600 light:text-green-500 hover:underline font-medium text-lg inline-flex items-center">Read
                     more
                     <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -120,7 +120,7 @@
                     improve the livelihood of the people.</p>
                 <a href="/media/docs/Towards Commercial Transformation of Agriculture in Narok County-Final (1).pdf"
                     target="_blank"
-                    class="text-blue-600 light:text-blue-500 hover:underline font-medium text-lg inline-flex items-center">Read
+                    class="text-green-600 light:text-green-500 hover:underline font-medium text-lg inline-flex items-center">Read
                     more
                     <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -155,7 +155,7 @@
                     for-</p>
                 <a href="/media/docs/Issue 128 - Nyeri County Weekly Newsletter (1) (1).pdf"
                     target="_blank"
-                    class="text-blue-600 light:text-blue-500 hover:underline font-medium text-lg inline-flex items-center">Read
+                    class="text-green-600 light:text-green-500 hover:underline font-medium text-lg inline-flex items-center">Read
                     more
                     <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -183,7 +183,7 @@
                     Event graced by the Principal Secretary, State Department for Agriculture Dr. Paul K.
                     Ronoh PHD.</p>
                 <a href="/media/docs/ASDSP II TREE PLANTING POSTER 2.pdf" target="_blank"
-                    class="text-blue-600 light:text-blue-500 hover:underline font-medium text-lg inline-flex items-center">Read
+                    class="text-green-600 light:text-green-500 hover:underline font-medium text-lg inline-flex items-center">Read
                     more
                     <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">

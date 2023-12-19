@@ -14,8 +14,8 @@
                 <div style="text-align: center; margin-bottom: 30px">
                     <h1
                         class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-black">
-                        National Programme Secretariate</h1>
-                    <p>The National Programme Secretariate (NPS) is responsible for management of the Programme taking
+                        National Programme Secretariat</h1>
+                    <p>The National Programme Secretariat (NPS) is responsible for management of the Programme taking
                         cognizance of the Ministry of Agriculture and Livestock Development (MoA&amp;LD) context but also
                         reaching out to other Sector stakeholders. NPS works in close liaison with JAS-TWGs/SWAGs; the
                         narrow Sector Departments, research, training and extension agencies; other Sector programmes and a

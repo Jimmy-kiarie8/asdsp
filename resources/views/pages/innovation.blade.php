@@ -2,6 +2,7 @@
 @section('content')
     <div id="wrapper">
         @include('pages.inc.header')
+        {{-- @include('pages.inc.banner') --}}
 
         <section class="bg-white dark:bg-gray-900" style="background: #f5f5f5;">
             <div class="grid max-w-full px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
@@ -25,10 +26,10 @@
                                     <div class="relative">
 
                                         <input type="text" id="default-email"
-                                            class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                                            class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 light:bg-gray-800 light:border-gray-700 light:placeholder-gray-400 light:text-white light:focus:ring-green-500 light:focus:border-green-500"
                                             placeholder="Search..." required name="search">
                                         <button type="submit" style="margin-left: 22%;margin-bottom: -1px;"
-                                            class="text-white absolute end-2.5 bottom-2.5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Search</button>
+                                            class="text-white absolute end-2.5 bottom-2.5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 light:bg-green-600 light:hover:bg-green-700 light:focus:ring-green-800">Search</button>
                                     </div>
                                 </form>
                             </div>
@@ -112,11 +113,15 @@
                 </div>
 
 
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 light:text-white"
-                    style="width: 50vw;margin-left: 40px;
+                <div id="map-container">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 light:text-white"
+                        style="width: 50vw;
                 ">ASDSP Project Locator</h2>
-                <div id="map" style="height: 500px;overflow: initial !important;width: 57vw;height: 100vh"></div>
-
+                    <div
+                        style="height: 3px;background: #348a21;width: 229px;margin-left: 35%;margin-bottom: 15px;margin-top: -10px;">
+                    </div>
+                    <div id="map" style="height: 500px;overflow: initial !important;width: 57vw;height: 100vh"></div>
+                </div>
             </div>
         </section>
     </div>
@@ -182,7 +187,7 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&callback=initMap">
     </script>
     <style>
-        #map {
+        #map-container {
             position: fixed !important;
             top: 100px !important;
             right: 10px !important;
@@ -190,6 +195,7 @@
             z-index: 10 !important;
             overflow: hidden !important;
             border-radius: 0 20px 20px 20px;
+            text-align: center;
         }
 
         #footer {
