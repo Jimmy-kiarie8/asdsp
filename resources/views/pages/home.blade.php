@@ -126,7 +126,7 @@
                                                     {{ $item->inno_name }}</h5>
                                             </a>
                                             <div class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="line-breaks">
-                                                <p id="p-breaks">{!! $item->inno_description !!}</p>
+                                                <p id="p-breaks">{{!! strip_tags($item->inno_description) !!}}</p>
                                             </div>
                                         </div>
 

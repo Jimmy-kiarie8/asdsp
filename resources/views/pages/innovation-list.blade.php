@@ -56,7 +56,7 @@
                                           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"  id="line-breaks">
                                               {{$item->inno_name}}</h5>
                                       </a>
-                                      <div class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="line-breaks"> {!!  $item->inno_description !!}</div>
+                                      <div class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="line-breaks"> {!! strip_tags($item->inno_description) !!}</div>
                                       <a href="{{ route('innovationdetails', $item->id) }}"
                                           class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                                           Read more

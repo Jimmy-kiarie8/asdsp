@@ -126,7 +126,7 @@ Route::any('/aboutus','\App\Http\Controllers\AboutUs@Index')->name('about-us');
 Route::any('/partners','\App\Http\Controllers\AboutUs@Partners');
 Route::any('/faqs','\App\Http\Controllers\AboutUs@faqs');
 Route::any('/innovations','\App\Http\Controllers\AboutUs@innovations')->name('innovations');
-Route::any('/successstories','\App\Http\Controllers\AboutUs@successstories');
+Route::any('/successstories','\App\Http\Controllers\AboutUs@successstories')->name('successstories');
 Route::any('/SuccessStories/Details/{id}','InnovationController@Details');
 Route::any('/publications','\App\Http\Controllers\AboutUs@publications')->name('publications');
 Route::any('/contactus','\App\Http\Controllers\AboutUs@contactus')->name('contact-us');
