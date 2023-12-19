@@ -85,59 +85,61 @@
 
                                 </div>
 
-
-                                <nav aria-label="Page navigation example" id="pagination">
-                                    <ul class="inline-flex -space-x-px text-sm">
-                                        {{-- Previous Page Link --}}
-                                        @if ($inovations->onFirstPage())
-                                            <li class="disabled">
-                                                <span
-                                                    class="flex items-center justify-center px-3 h-8 text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg opacity-50 cursor-not-allowed">Previous</span>
-                                            </li>
-                                        @else
-                                            <li>
-                                                <a href="{{ $inovations->previousPageUrl() }}"
-                                                    class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-                                            </li>
-                                        @endif
-
-                                        {{-- Pagination Elements --}}
-                                        @for ($page = 1; $page <= $inovations->lastPage(); $page++)
-                                            {{-- Display the first 3 pages --}}
-                                            @if ($page <= 3 || $page >= $inovations->lastPage() - 2)
-                                                <li>
-                                                    <a href="{{ $inovations->url($page) }}"
-                                                        class="flex items-center justify-center px-3 h-8 leading-tight @if ($inovations->currentPage() === $page) text-blue-600 bg-blue-50 @else text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white @endif">{{ $page }}</a>
-                                                </li>
-                                            @elseif ($page >= $inovations->currentPage() - 1 && $page <= $inovations->currentPage() + 1)
-                                                {{-- Display a few pages before and after the current page --}}
-                                                <li>
-                                                    <a href="{{ $inovations->url($page) }}"
-                                                        class="flex items-center justify-center px-3 h-8 leading-tight @if ($inovations->currentPage() === $page) text-blue-600 bg-blue-50 @else text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white @endif">{{ $page }}</a>
-                                                </li>
-                                            @elseif ($page == $inovations->currentPage() - 2 || $page == $inovations->currentPage() + 2)
-                                                {{-- Display dots in the middle --}}
-                                                <li><span
-                                                        class="flex items-center justify-center px-3 h-8 text-gray-500">...</span>
-                                                </li>
-                                            @endif
-                                        @endfor
-
-                                        {{-- Next Page Link --}}
-                                        @if ($inovations->hasMorePages())
-                                            <li>
-                                                <a href="{{ $inovations->nextPageUrl() }}"
-                                                    class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-                                            </li>
-                                        @else
-                                            <li class="disabled">
-                                                <span
-                                                    class="flex items-center justify-center px-3 h-8 text-gray-500 bg-white border border-e-0 border-gray-300 rounded-e-lg opacity-50 cursor-not-allowed">Next</span>
-                                            </li>
-                                        @endif
-                                    </ul>
-                                </nav>
                             @endforeach
+
+
+
+                            <nav aria-label="Page navigation example" id="pagination">
+                                <ul class="inline-flex -space-x-px text-sm">
+                                    {{-- Previous Page Link --}}
+                                    @if ($inovations->onFirstPage())
+                                        <li class="disabled">
+                                            <span
+                                                class="flex items-center justify-center px-3 h-8 text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg opacity-50 cursor-not-allowed">Previous</span>
+                                        </li>
+                                    @else
+                                        <li>
+                                            <a href="{{ $inovations->previousPageUrl() }}"
+                                                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                                        </li>
+                                    @endif
+
+                                    {{-- Pagination Elements --}}
+                                    @for ($page = 1; $page <= $inovations->lastPage(); $page++)
+                                        {{-- Display the first 3 pages --}}
+                                        @if ($page <= 3 || $page >= $inovations->lastPage() - 2)
+                                            <li>
+                                                <a href="{{ $inovations->url($page) }}"
+                                                    class="flex items-center justify-center px-3 h-8 leading-tight @if ($inovations->currentPage() === $page) text-blue-600 bg-blue-50 @else text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white @endif">{{ $page }}</a>
+                                            </li>
+                                        @elseif ($page >= $inovations->currentPage() - 1 && $page <= $inovations->currentPage() + 1)
+                                            {{-- Display a few pages before and after the current page --}}
+                                            <li>
+                                                <a href="{{ $inovations->url($page) }}"
+                                                    class="flex items-center justify-center px-3 h-8 leading-tight @if ($inovations->currentPage() === $page) text-blue-600 bg-blue-50 @else text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white @endif">{{ $page }}</a>
+                                            </li>
+                                        @elseif ($page == $inovations->currentPage() - 2 || $page == $inovations->currentPage() + 2)
+                                            {{-- Display dots in the middle --}}
+                                            <li><span
+                                                    class="flex items-center justify-center px-3 h-8 text-gray-500">...</span>
+                                            </li>
+                                        @endif
+                                    @endfor
+
+                                    {{-- Next Page Link --}}
+                                    @if ($inovations->hasMorePages())
+                                        <li>
+                                            <a href="{{ $inovations->nextPageUrl() }}"
+                                                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+                                        </li>
+                                    @else
+                                        <li class="disabled">
+                                            <span
+                                                class="flex items-center justify-center px-3 h-8 text-gray-500 bg-white border border-e-0 border-gray-300 rounded-e-lg opacity-50 cursor-not-allowed">Next</span>
+                                        </li>
+                                    @endif
+                                </ul>
+                            </nav>
                         @else
                             <div class="flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
                                 role="alert" >
