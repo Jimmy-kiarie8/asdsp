@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Modules\Usermanagement\Entities\County;
 use Modules\Usermanagement\Entities\SuccessStory;
@@ -13,6 +14,7 @@ use Modules\Usermanagement\Entities\FeaturedItem;
 use Modules\Usermanagement\Entities\Publication;
 
 use DB;
+use Illuminate\Support\Facades\Mail;
 
 class AboutUs extends Controller
 {
@@ -94,16 +96,16 @@ class AboutUs extends Controller
         $search = request('search');
 
 
-        $locations = Innovation::whereNotNull('inno_latitude')->whereNotNull('inno_longitude')->select('inno_latitude', 'inno_longitude', 'inno_description', 'inno_name')->when($search, function($q) use($search) {
+        $locations = Innovation::whereNotNull('inno_latitude')->whereNotNull('inno_longitude')->select('inno_latitude', 'inno_longitude', 'inno_description', 'inno_name')->when($search, function ($q) use ($search) {
             return $q->where('inno_name', 'Like', "%{$search}%")
-                        ->orWhere('inno_description', 'Like', "%{$search}%")
-                        ->orWhere('inno_name', 'Like', "%{$search}%")
-                        ->orWhere('innovation_type', 'Like', "%{$search}%")
-                        ->orWhere('inno_location', 'Like', "%{$search}%")
-                        ->orWhere('innovation_status', 'Like', "%{$search}%")
-                        ->orWhere('inno_contactname', 'Like', "%{$search}%")
-                        ->orWhere('inno_sources', 'Like', "%{$search}%")
-                        ->orWhere('vco_name', 'Like', "%{$search}%");
+                ->orWhere('inno_description', 'Like', "%{$search}%")
+                ->orWhere('inno_name', 'Like', "%{$search}%")
+                ->orWhere('innovation_type', 'Like', "%{$search}%")
+                ->orWhere('inno_location', 'Like', "%{$search}%")
+                ->orWhere('innovation_status', 'Like', "%{$search}%")
+                ->orWhere('inno_contactname', 'Like', "%{$search}%")
+                ->orWhere('inno_sources', 'Like', "%{$search}%")
+                ->orWhere('vco_name', 'Like', "%{$search}%");
         })->paginate(8);
 
 
@@ -123,7 +125,7 @@ class AboutUs extends Controller
         $data['featured_items'] = FeaturedItem::inRandomOrder()->take(6)->get();
 
         $totalAdverts = InnovationCategory::count();
-         $users = Innovation::whereNull('is_deleted')->count();
+        $users = Innovation::whereNull('is_deleted')->count();
         $applicants = SuccessStory::whereNull('is_deleted')->count();
         $applications = Publication::whereNull('is_deleted')->count();
 
@@ -148,10 +150,10 @@ class AboutUs extends Controller
             ->leftJoin('value_chains as v', 'v.id', '=', 'innovations.value_chain_id')
             ->join('counties as c', 'c.id', '=', 'innovations.county_id')
             ->orderBy('innovations.created_at', 'desc') // Order by created_at column in descending order
-            ->when($search, function($q) use($search) {
+            ->when($search, function ($q) use ($search) {
                 return $q->where('inno_name', 'Like', "%{$search}%")
-                            ->orWhere('inno_description', 'Like', "%{$search}%")
-                            ->orWhere('vco_name', 'Like', "%{$search}%");
+                    ->orWhere('inno_description', 'Like', "%{$search}%")
+                    ->orWhere('vco_name', 'Like', "%{$search}%");
             })
             ->paginate(12);
 
@@ -168,7 +170,7 @@ class AboutUs extends Controller
 
         $data['page_title'] = "Success Stories";
 
-         $data['valuechains'] = ValueChain::all();
+        $data['valuechains'] = ValueChain::all();
 
         $data['innovations'] = SuccessStory::whereNull('is_deleted')->get();
         $data['counties'] = County::all();
@@ -193,5 +195,15 @@ class AboutUs extends Controller
         return view("pages.contact", $data);
         // return view("frontend.contactus",$data);
 
+    }
+
+    public function contact_mail(Request $request)
+    {
+        // return $request->all();
+        $data = $request->all();
+        Mail::to($request->email)->send(new ContactMail($data));
+
+        // Return back with a success message
+        return redirect()->back()->with('success', 'Your message has been sent successfully!');
     }
 }
