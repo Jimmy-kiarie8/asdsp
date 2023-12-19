@@ -17,25 +17,18 @@ class="bg-white dark:bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs
     <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200">At ASDSP, our
         goal is not just to change the face of Kenyan agriculture but to uplift the lives of millions of Kenyans
         through sustainable and profitable agricultural practices.</p>
-    <form class="w-full max-w-md mx-auto" style="background: transparent">
+    <form class="w-full max-w-md mx-auto" style="background: transparent" method="GET" action="{{ route('innovation-list') }}">
         <label for="default-email" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Email
             sign-up</label>
         <div class="relative">
             <div class="absolute inset-y-0 rtl:inset-x-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
-                    <path
-                        d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
-                    <path
-                        d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
-                </svg>
+                
             </div>
-            <input type="email" id="default-email"
-                class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                placeholder="Enter your email here..." required>
+            <input type="text" id="default-email"
+                class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 light:bg-gray-800 light:border-gray-700 light:placeholder-gray-400 light:text-white light:focus:ring-green-500 light:focus:border-green-500"
+                placeholder="Search..." required>
             <button type="submit"
-                class="text-white absolute end-2.5 bottom-2.5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Sign
-                up</button>
+                class="text-white absolute end-2.5 bottom-2.5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 light:bg-green-600 light:hover:bg-green-700 light:focus:ring-green-800">Search</button>
         </div>
     </form>
 </div>
