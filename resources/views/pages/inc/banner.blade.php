@@ -5,11 +5,7 @@ class="bg-white dark:bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs
         class="inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm text-green-700 bg-green-100 rounded-full dark:bg-green-900 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800">
         <span class="text-xs bg-green-600 rounded-full text-white px-4 py-1.5 me-3">ASDSP</span> <span
             class="text-sm font-medium">Cultivating Innovation, Growing Success.</span>
-        <svg class="w-2.5 h-2.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-            fill="none" viewBox="0 0 6 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="m1 9 4-4-4-4" />
-        </svg>
+        
     </a>
     <h1
         class="mb-4 text-xl font-extrabold tracking-tight leading-none text-gray-900 md:text-2xl lg:text-5xl dark:text-white">
