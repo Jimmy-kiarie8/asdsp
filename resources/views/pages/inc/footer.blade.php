@@ -27,11 +27,11 @@
           <p class="flex items-center"><svg class="w-[14px] h-[14px] text-white-800 light:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16" style="height: 20px; padding-right: 10px">
             <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
             <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
-          </svg>E-mail:info@asdsp.go.ke</p>
+          </svg>E-mail:info.asdsp@kilimo.go.ke</p>
           <br>
           <p class="flex items-center"><svg class="w-[14px] h-[14px] text-white-800 light:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" style="height: 20px; padding-right: 10px">
             <path d="M10 .5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19ZM8.374 17.4a7.6 7.6 0 0 1-5.9-7.4c0-.83.137-1.655.406-2.441l.239.019a3.887 3.887 0 0 1 2.082 2.5 4.1 4.1 0 0 0 2.441 2.8c1.148.522 1.389 2.007.732 4.522Zm3.6-8.829a.997.997 0 0 0-.027-.225 5.456 5.456 0 0 0-2.811-3.662c-.832-.527-1.347-.854-1.486-1.89a7.584 7.584 0 0 1 8.364 2.47c-1.387.208-2.14 2.237-2.14 3.307a1.187 1.187 0 0 1-1.9 0Zm1.626 8.053-.671-2.013a1.9 1.9 0 0 1 1.771-1.757l2.032.619a7.553 7.553 0 0 1-3.132 3.151Z"/>
-          </svg> www.asdsp.kilimo.go.ke</p>
+          </svg> asdsp.kilimo.go.ke</p>
           <br>
 
 
@@ -52,7 +52,7 @@
           <input type="text" id="default-email"
               class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 light:bg-gray-800 light:border-gray-700 light:placeholder-gray-400 light:text-white light:focus:ring-green-500 light:focus:border-green-500"
               placeholder="Search..." required name="search">
-          <button type="submit" style="margin-left: 22%;margin-bottom: -1px;" id="footer-button"
+          <button type="submit" style="m" id="footer-button"
               class="text-white absolute end-2.5 bottom-2.5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 light:bg-green-600 light:hover:bg-green-700 light:focus:ring-green-800">Search</button>
       </div>
   </form>
@@ -62,6 +62,23 @@
   </div>
 </footer>
 
+
+<style>
+  #footer #footer-button {
+      margin-left: 17vw;
+      margin-bottom: -1px;
+  }
+
+
+  @media (max-width: 767.98px) {
+
+    #footer #footer-button {
+      margin-left: 47vw;
+      margin-bottom: -1px;
+  }
+
+  }
+</style>
 
 {{-- 
 <footer class="p-4 bg-white sm:p-6 light:bg-gray-800">
