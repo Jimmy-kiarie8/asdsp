@@ -4,10 +4,10 @@
         @include('pages.inc.header')
 
         <section class="bg-white dark:bg-gray-900" style="background: #f5f5f5;">
-            <div class="grid max-w-full px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+            <div class="grid max-w-full px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
                 <div class="mr-auto place-self-center lg:col-span-5">
 
-                    <section class="bg-white light:bg-gray-900" style="border-radius: 70px 70px 0 0;">
+                    <section class="bg-white light:bg-gray-900" style="border-radius: 0 70px 0 0;">
                         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
                             <div class="max-w-screen-md mb-8 lg:mb-16">
                                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 light:text-white">
@@ -44,7 +44,7 @@
                                                     {{ $location->inno_name }}</h5>
                                             </a>
                                             <div class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="line-breaks">
-                                                <p id="p-breaks">{!! $location->inno_description !!}}</p>
+                                                <p id="p-breaks">{!! strip_tags($location->inno_description) !!}</p>
                                             </div>
                                         </div>
 
@@ -52,62 +52,69 @@
                                 @endforeach
 
                             </div>
+
+                            <br>
+                            <nav aria-label="Page navigation example" id="pagination">
+                                <ul class="inline-flex -space-x-px text-sm">
+                                    {{-- Previous Page Link --}}
+                                    @if ($locations->onFirstPage())
+                                        <li class="disabled">
+                                            <span
+                                                class="flex items-center justify-center px-3 h-8 text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg opacity-50 cursor-not-allowed">Previous</span>
+                                        </li>
+                                    @else
+                                        <li>
+                                            <a href="{{ $locations->previousPageUrl() }}"
+                                                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                                        </li>
+                                    @endif
+
+                                    {{-- Pagination Elements --}}
+                                    @for ($page = 1; $page <= $locations->lastPage(); $page++)
+                                        {{-- Display the first 3 pages --}}
+                                        @if ($page <= 3 || $page >= $locations->lastPage() - 2)
+                                            <li>
+                                                <a href="{{ $locations->url($page) }}"
+                                                    class="flex items-center justify-center px-3 h-8 leading-tight @if ($locations->currentPage() === $page) text-blue-600 bg-blue-50 @else text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white @endif">{{ $page }}</a>
+                                            </li>
+                                        @elseif ($page >= $locations->currentPage() - 1 && $page <= $locations->currentPage() + 1)
+                                            {{-- Display a few pages before and after the current page --}}
+                                            <li>
+                                                <a href="{{ $locations->url($page) }}"
+                                                    class="flex items-center justify-center px-3 h-8 leading-tight @if ($locations->currentPage() === $page) text-blue-600 bg-blue-50 @else text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white @endif">{{ $page }}</a>
+                                            </li>
+                                        @elseif ($page == $locations->currentPage() - 2 || $page == $locations->currentPage() + 2)
+                                            {{-- Display dots in the middle --}}
+                                            <li><span
+                                                    class="flex items-center justify-center px-3 h-8 text-gray-500">...</span>
+                                            </li>
+                                        @endif
+                                    @endfor
+
+                                    {{-- Next Page Link --}}
+                                    @if ($locations->hasMorePages())
+                                        <li>
+                                            <a href="{{ $locations->nextPageUrl() }}"
+                                                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+                                        </li>
+                                    @else
+                                        <li class="disabled">
+                                            <span
+                                                class="flex items-center justify-center px-3 h-8 text-gray-500 bg-white border border-e-0 border-gray-300 rounded-e-lg opacity-50 cursor-not-allowed">Next</span>
+                                        </li>
+                                    @endif
+                                </ul>
+                            </nav>
+
                         </div>
                     </section>
 
-                    <nav aria-label="Page navigation example" id="pagination">
-                        <ul class="inline-flex -space-x-px text-sm">
-                            {{-- Previous Page Link --}}
-                            @if ($locations->onFirstPage())
-                                <li class="disabled">
-                                    <span
-                                        class="flex items-center justify-center px-3 h-8 text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg opacity-50 cursor-not-allowed">Previous</span>
-                                </li>
-                            @else
-                                <li>
-                                    <a href="{{ $locations->previousPageUrl() }}"
-                                        class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-                                </li>
-                            @endif
-
-                            {{-- Pagination Elements --}}
-                            @for ($page = 1; $page <= $locations->lastPage(); $page++)
-                                {{-- Display the first 3 pages --}}
-                                @if ($page <= 3 || $page >= $locations->lastPage() - 2)
-                                    <li>
-                                        <a href="{{ $locations->url($page) }}"
-                                            class="flex items-center justify-center px-3 h-8 leading-tight @if ($locations->currentPage() === $page) text-blue-600 bg-blue-50 @else text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white @endif">{{ $page }}</a>
-                                    </li>
-                                @elseif ($page >= $locations->currentPage() - 1 && $page <= $locations->currentPage() + 1)
-                                    {{-- Display a few pages before and after the current page --}}
-                                    <li>
-                                        <a href="{{ $locations->url($page) }}"
-                                            class="flex items-center justify-center px-3 h-8 leading-tight @if ($locations->currentPage() === $page) text-blue-600 bg-blue-50 @else text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white @endif">{{ $page }}</a>
-                                    </li>
-                                @elseif ($page == $locations->currentPage() - 2 || $page == $locations->currentPage() + 2)
-                                    {{-- Display dots in the middle --}}
-                                    <li><span class="flex items-center justify-center px-3 h-8 text-gray-500">...</span>
-                                    </li>
-                                @endif
-                            @endfor
-
-                            {{-- Next Page Link --}}
-                            @if ($locations->hasMorePages())
-                                <li>
-                                    <a href="{{ $locations->nextPageUrl() }}"
-                                        class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-                                </li>
-                            @else
-                                <li class="disabled">
-                                    <span
-                                        class="flex items-center justify-center px-3 h-8 text-gray-500 bg-white border border-e-0 border-gray-300 rounded-e-lg opacity-50 cursor-not-allowed">Next</span>
-                                </li>
-                            @endif
-                        </ul>
-                    </nav>
-
                 </div>
 
+
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 light:text-white"
+                    style="width: 50vw;margin-left: 40px;
+                ">ASDSP Project Locator</h2>
                 <div id="map" style="height: 500px;overflow: initial !important;width: 57vw;height: 100vh"></div>
 
             </div>
@@ -174,4 +181,20 @@
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&callback=initMap">
     </script>
+    <style>
+        #map {
+            position: fixed !important;
+            top: 100px !important;
+            right: 10px !important;
+            height: 87vh !important;
+            z-index: 10 !important;
+            overflow: hidden !important;
+            border-radius: 0 20px 20px 20px;
+        }
+
+        #footer {
+            position: relative !important;
+            z-index: 10;
+        }
+    </style>
 @endsection

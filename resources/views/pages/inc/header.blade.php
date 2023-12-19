@@ -28,6 +28,9 @@
           <a href="{{ route('publications') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">PUBLICATIONS</a>
         </li>
         <li>
+          <a href="{{ route('successstories') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">SUCCESS STORIES</a>
+        </li>
+        <li>
           <a href="{{ route('contact-us') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">CONTACT</a>
         </li>
         
@@ -136,7 +139,7 @@
                       </li>
                       <li id=""
                         class="menu-item menu-item-type-post_type menu-item-object-page  stm_mega_cols_inside_default">
-                        <a href="#">Success Stories</a>
+                        <a href="{{ route('successstories') }}">Success Stories</a>
                       </li>
                     </ul>
                   </li>

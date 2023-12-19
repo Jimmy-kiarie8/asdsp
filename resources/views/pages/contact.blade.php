@@ -2,21 +2,7 @@
 @section('content')
     @include('pages.inc.header')
 
-
-<section class="bg-white dark:bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] dark:bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative">
-        <a href="#" class="inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm text-green-700 bg-green-100 rounded-full dark:bg-green-900 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800">
-            <span class="text-xs bg-green-600 rounded-full text-white px-4 py-1.5 me-3">ASDSP</span> <span class="text-sm font-medium">Be part of Kenya's agricultural revolution. Together, we grow.</span> 
-            <svg class="w-2.5 h-2.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-            </svg>
-        </a>
-        <h1 class="mb-4 text-xl font-extrabold tracking-tight leading-none text-gray-900 md:text-2xl lg:text-5xl dark:text-white">Welcome to the Agriculture Sector Development Support Programme (ASDSP)</h1>
-        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200">At ASDSP, our goal is not just to change the face of Kenyan agriculture but to uplift the lives of millions of Kenyans through sustainable and profitable agricultural practices.</p>
-      
-    </div>
-    <div class="bg-gradient-to-b from-green-50 to-transparent dark:from-green-900 w-full h-full absolute top-0 left-0 z-0"></div>
-</section>
+    @include('pages.inc.banner')
 
 <br>
 <br>
@@ -133,7 +119,7 @@
           <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl light:text-gray-400">
             For inquiries, support, and feedback, please email us at <a href="mailto:info.asdsp@kilimo.go.ke">info.asdsp@kilimo.go.ke</a> or call us at <a href="tel:+254724256157">+254724256157</a>.
           </p>
-          <a href="https://asdsp.kilimo.go.ke/" target="_blank" class="text-blue-600 light:text-blue-500 hover:underline font-medium text-lg inline-flex items-center">Visit Our Website
+          <a href="https://asdsp.kilimo.go.ke/" target="_blank" class="text-green-600 light:text-green-500 hover:underline font-medium text-lg inline-flex items-center">Visit Our Website
               <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
               </svg>
@@ -147,23 +133,23 @@
               <form class="mt-8 space-y-6" action="#" style="width: 100%">
                 <div>
                     <label for="name" class="block mb-2 text-sm font-medium text-gray-900 light:text-white">Name</label>
-                    <input type="name" name="name" id="name" placeholder="John ..." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-blue-500 light:focus:border-blue-500" required>
+                    <input type="name" name="name" id="name" placeholder="John ..." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-green-500 light:focus:border-green-500" required>
                 </div>
                   <div>
                       <label for="email" class="block mb-2 text-sm font-medium text-gray-900 light:text-white">Email</label>
-                      <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-blue-500 light:focus:border-blue-500" placeholder="name@company.com" required>
+                      <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-green-500 light:focus:border-green-500" placeholder="name@company.com" required>
                   </div>
                   <div>
                       <label for="name" class="block mb-2 text-sm font-medium text-gray-900 light:text-white">Phone No. </label>
-                      <input type="name" name="name" id="name" placeholder="John ..." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-blue-500 light:focus:border-blue-500" required>
+                      <input type="name" name="name" id="name" placeholder="John ..." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-green-500 light:focus:border-green-500" required>
                   </div>
                   <div>
                       <label for="name" class="block mb-2 text-sm font-medium text-gray-900 light:text-white">Message</label>
-                      <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-blue-500 light:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+                      <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-green-500 focus:border-green-500 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-green-500 light:focus:border-green-500" placeholder="Leave a comment..."></textarea>
 
                   </div>
                  
-                  <button type="submit" class="w-full px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 sm:w-auto light:bg-blue-600 light:hover:bg-blue-700 light:focus:ring-blue-800">Submit</button>
+                  <button type="submit" class="w-full px-5 py-3 text-base font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:ring-green-300 sm:w-auto light:bg-green-600 light:hover:bg-green-700 light:focus:ring-green-800">Submit</button>
                   
               </form>
           </div>

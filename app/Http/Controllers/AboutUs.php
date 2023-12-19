@@ -174,7 +174,7 @@ class AboutUs extends Controller
         $data['counties'] = County::all();
         $data['nodes'] = NodeType::all();
         $publications = SuccessStory::paginate();
-        return view("pages.publications", compact('data', 'publications'));
+        return view("pages.success-story", compact('data', 'publications'));
     }
 
     public function publications()
