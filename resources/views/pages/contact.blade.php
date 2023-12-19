@@ -200,7 +200,7 @@
                                 <label for="name"
                                     class="block mb-2 text-sm font-medium text-gray-900 light:text-white">Phone No.
                                 </label>
-                                <input type="text" name="phone" id="phone" placeholder="John ..."
+                                <input type="text" name="phone" id="phone" placeholder="254 ..."
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-green-500 light:focus:border-green-500"
                                     required>
                             </div>
