@@ -132,6 +132,8 @@ Route::any('/publications','\App\Http\Controllers\AboutUs@publications')->name('
 Route::any('/contactus','\App\Http\Controllers\AboutUs@contactus')->name('contact-us');
 Route::any('/innovationdetails/{id}','\App\Http\Controllers\AboutUs@innovationdetails')->name('innovationdetails');
 
+Route::post('/contact-mail','\App\Http\Controllers\AboutUs@contact_mail')->name('contact-mail');
+
 
 Route::any('/innovation-list','\App\Http\Controllers\AboutUs@innovation_list')->name('innovation-list');
 
