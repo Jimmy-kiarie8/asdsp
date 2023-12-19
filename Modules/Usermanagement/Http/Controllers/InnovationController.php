@@ -731,8 +731,9 @@ where innovations.is_deleted is null   ", ["Submitted", "Pending"]);
             $model->inno_location = $data['inno_location'];
             $model->inno_longitude = $data['inno_longitude'];
             $model->inno_latitude = $data['inno_latitude'];
-            $model->inno_subcounty = $data['subcounty'];
-            $model->inno_ward = $data['wardname'];
+            $model->inno_subcounty = (array_key_exists('subcounty', $data)) ? $data['subcounty'] : null;
+            $model->inno_ward = (array_key_exists('wardname', $data)) ? $data['wardname'] : null;
+
             $model->node_id = $data['node_id'];
             $model->vco_name = $data['org_id'];
             $model->innovation_status = $data['innovation_status'];
