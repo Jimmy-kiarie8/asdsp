@@ -89,8 +89,10 @@
                                         <div class="form-group col-md-6">
                                             <label>Sub County</label>
 
+                                            {{ Form::select('subcounty', [null => '--Select County--'] + $sub_counties, (int)$model->inno_subcounty, ['class' => 'form-control', 'required' => 'required', 'id' => 'County', 'style' => 'width:100%']) }}
 
-                                            {{ Form::select('innovation_type', [null => '--Select Type--'] + $categories, $model->inno_subcounty, ['class' => 'form-control', 'required' => 'required', 'id' => 'Node', 'style' => 'width:100%']) }}
+{{-- 
+                                            {{ Form::select('subcounty', [null => '--Select Sub County--'] + $sub_counties, $model->innovation_type, ['class' => 'form-controls', 'required' => 'required', 'id' => 'SubCounty', 'style' => 'width:100%']) }} --}}
 
 
                                         </div>
@@ -141,12 +143,16 @@
                                             {{ Form::select('node_id', [null => '--Select Node--'] + $nodes, $model->node_id, ['class' => 'form-control', 'required' => 'required', 'id' => 'Node', 'style' => 'width:100%']) }}
                                         </div>
 
-
+{{-- 
                                         <div class="form-group col-md-6">
                                             <label>Value Chain</label>
                                             {{ Form::select('value_chain', [null => '--Select Value--'] + $valuechains, $model->category, ['class' => 'form-control', 'value' => $model->value_chain_id,'required' => 'required', 'id' => 'ValueChain', 'style' => 'width:100%']) }}
-                                        </div>
 
+                                            
+                                            {{ Form::select('value_chain', [null => '--Select County--'] + $valuechains, (int)$model->inno_value_chain, ['class' => 'form-control', 'required' => 'required', 'id' => 'County', 'style' => 'width:100%']) }}
+
+                                        </div>
+ --}}
 
 
 
@@ -161,7 +167,7 @@
                                         <div class="form-group col-md-12">
                                             <label>VCO/Group Name </label>
                                             <input type="text" name="org_id" class="form-control"
-                                                value="{{ $model->inno_vco_promoted }}" required>
+                                                value="{{ $model->vco_name }}" required>
 
 
                                         </div>
@@ -274,18 +280,18 @@
 
                                 <div class="form-group col-md-12">
                                     <label>Innovation Backgound Infomation</label>
-                                    <textarea rows="4" name="inno_background" class="form-control" id="Background" required>{{ $model->inno_background }}</textarea>
+                                    <textarea rows="4" name="inno_background" class="form-control" id="Background">{{ $model->inno_background }}</textarea>
                                 </div>
 
 
                                 <div class="form-group col-md-12">
                                     <label>Innovation Description</label>
-                                    <textarea rows="4" name="inno_description" class="form-control" id="Description" required>{{ $model->inno_description }}</textarea>
+                                    <textarea rows="4" name="inno_description" class="form-control" id="Description">{{ $model->inno_description }}</textarea>
                                 </div>
 
                                 <div class="form-group col-md-12">
                                     <label>Innovation Objectives</label>
-                                    <textarea rows="4" id="Objectives" name="inno_objective" class="form-control" required>{{ $model->inno_objective }}</textarea>
+                                    <textarea rows="4" id="Objectives" name="inno_objective" class="form-control">{{ $model->inno_objective }}</textarea>
                                 </div>
 
 
@@ -297,13 +303,13 @@
 
                                 <div class="form-group col-md-12">
                                     <label>Practical utility of Innovation</label>
-                                    <textarea rows="4" name="inno_vca_benefit" class="form-control" id="PracticalUtility" required>{{ $model->inno_vca_benefit }}</textarea>
+                                    <textarea rows="4" name="inno_vca_benefit" class="form-control" id="PracticalUtility">{{ $model->inno_vca_benefit }}</textarea>
                                 </div>
 
 
                                 <div class="form-group col-md-12">
                                     <label>Results and Impacts:</label>
-                                    <textarea rows="4" id="Impact" name="inno_lesson_challenges" class="form-control" required>{{ $model->inno_lesson_challenges }}</textarea>
+                                    <textarea rows="4" id="Impact" name="inno_lesson_challenges" class="form-control">{{ $model->inno_lesson_challenges }}</textarea>
                                 </div>
                             </div>
 
