@@ -679,7 +679,7 @@ where innovations.is_deleted is null   ", ["Submitted", "Pending"]);
         $data['counties'] = County::pluck('county_name', 'id')->toArray();
         $data['nodes'] = NodeType::pluck('node_name', 'id')->toArray();
         $data['categories'] = InnovationCategory::pluck('category_name', 'category_name')->toArray();
-        $data['sub_counties'] = Ward::select('subcountyname')->groupBy('subcountyname')->pluck('subcountyname', 'subcountyname')->toArray();
+        $data['sub_counties'] = Ward::select('subcountyname', 'id')->groupBy('subcountyname')->pluck('subcountyname', 'id')->toArray();
 
 
 
@@ -699,7 +699,7 @@ where innovations.is_deleted is null   ", ["Submitted", "Pending"]);
         $data['model'] = Innovation::find($id);
 
 
-        //   return $data;
+           $data;
 
 
 
@@ -737,7 +737,7 @@ where innovations.is_deleted is null   ", ["Submitted", "Pending"]);
             $model->node_id = $data['node_id'];
             $model->vco_name = $data['org_id'];
             $model->innovation_status = $data['innovation_status'];
-            $model->value_chain_id = $data['value_chain'];
+            // $model->value_chain_id = $data['value_chain'];
             $model->inno_sources = $data['inno_sources'];
             $model->inno_male_adultvca = $data['inno_male_adultvca'];
             $model->inno_female_adultvca = $data['inno_female_adultvca'];
