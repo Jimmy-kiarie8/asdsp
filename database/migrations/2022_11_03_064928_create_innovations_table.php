@@ -54,6 +54,7 @@ class CreateInnovationsTable extends Migration
             $table->integer('updated_by')->unsigned()->nullable();
             $table->foreign('updated_by')->references('id')->on('users')
                 ->onUpdate('No Action')->onDelete('No Action');
+            $table->softDeletes();
             $table->timestamps();
 
             

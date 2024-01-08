@@ -138,15 +138,28 @@ where 1
 
     public function DeleteInnovation($id, Request $request)
     {
-        $data['model'] = $model = Innovation::find($id);
+        $model = Innovation::find($id);
+        $data['model'] = $model;
         $data['url'] = url()->current();
+        // $user = User::find($model->created_by);
+        // FacadesAuth::id();
+
+
         if ($request->isMethod("post")) {
-            $data = $request->all();
-            if (isset($data['confirm'])) {
-                $model->delete();
-                Session::flash("success_msg", "Innovation Deleted Successfully");
+            // return redirect()->back()->withErrors('You do not have permission to delete this innovation.');
+                if (Auth::user()->hasRole("SuperAdmin") || $model->created_by == Auth::id()) {
+                // Your code for authorized users
+                $data = $request->all();
+                if (isset($data['confirm'])) {
+                    $model->delete();
+                    Session::flash("success_msg", "Innovation Deleted Successfully");
+                }
+                return redirect()->back();
+            } else {
+                // Code to handle unauthorized access
+                abort(403, 'You do not have permission to delete this innovation! Please contact the admin to delete the innovation.');
+                return redirect()->back()->withErrors('You do not have permission to delete this innovation. Please contact the admin to delete the innovation');
             }
-            return  redirect()->back();
         }
 
         return view('usermanagement::innovations._delete', $data);
@@ -699,7 +712,7 @@ where innovations.is_deleted is null   ", ["Submitted", "Pending"]);
         $data['model'] = Innovation::find($id);
 
 
-           $data;
+        $data;
 
 
 

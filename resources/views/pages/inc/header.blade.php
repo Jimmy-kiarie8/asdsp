@@ -90,14 +90,14 @@
           <div class="stm-header__cell stm-header__cell_right">
             <div class="stm-header__element object723 stm-header__element_">
               <div class="stm-socials">
-                <a href="fb.com" class="stm-socials__icon icon_16px stm-socials__icon_round" target="_blank">
+                {{-- <a href="fb.com" class="stm-socials__icon icon_16px stm-socials__icon_round" target="_blank">
                   <i class="fa fa-facebook"></i>
-                </a>
-                <a href="twitter.com" class="stm-socials__icon icon_16px stm-socials__icon_round" target="_blank">
+                </a> --}}
+                <a href="https://twitter.com/TIMPSPORTAL" class="stm-socials__icon icon_16px stm-socials__icon_round" target="_blank">
                   <i class="fa fa-twitter"></i>
                 </a>
-                <a href="instagram.com" class="stm-socials__icon icon_16px stm-socials__icon_round" target="_blank">
-                  <i class="fa fa-instagram"></i>
+                <a href="https://youtube.com/@TIMPsportal?si=jCleiUKgIMjnybSU" class="stm-socials__icon icon_16px stm-socials__icon_round" target="_blank">
+                  <i class="fa fa-youtube"></i>
                 </a>
               </div>
             </div>
