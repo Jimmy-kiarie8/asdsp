@@ -122,13 +122,13 @@
 
                                         </div>
                                         <div class="form-group col-md-3">
-                                            <label>Longitude</label>
+                                            <label>Longitude (+)</label>
                                             <input type="text" name="inno_longitude" class="form-control" required
                                                 id="lon" value="{{ old('inno_longitude') }}">
 
                                         </div>
                                         <div class="form-group col-md-3">
-                                            <label>Latitude</label>
+                                            <label>Latitude(-)</label>
                                             <input type="text" id="lat" name="inno_latitude" class="form-control"
                                                 required value="{{ old('inno_latitude') }}">
 
