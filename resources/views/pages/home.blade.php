@@ -571,13 +571,101 @@
                         </div>
 
                     </div>
-
-
-
-
-
                 </div>
             </section>
+
+
+            {{-- Twitter --}}
+            <section class="bg-white dark:bg-gray-900" style="background: #fff;">
+                <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-12">
+                    <div class="text-center">
+                        <a href="https://twitter.com/TIMPSPORTAL" target="_blank"
+                            class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+                            role="alert">
+                            <span class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3">New</span> <span
+                                class="text-sm font-medium">Twitter! See what's new</span>
+                            <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <h4 style=" font-size: 38px;
+            font-weight: bold;">
+                            Twitter Feed</h4>
+                        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
+                            style="    text-align: center !important;">Get the
+                            latest tweets, success stories and testimonial from around the country.
+
+                        </p>
+                    </div>
+                    {{-- <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:space-y-0" style="    gap: 0.5rem">
+                        @foreach ($successStories as $item)
+                            <div>
+                                <div
+                                    class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                    <a href="#">
+                                        <img class="rounded-t-lg"
+                                            src="http://197.156.140.250:1080/sites/default/files/styles/height/public/2023-06/solar%20%281%29.jpg?itok=HWAobr5t"
+                                            alt="" />
+                                    </a>
+                                    <div class="p-5" id="hover-green">
+                                        <a href="#">
+                                            <h5
+                                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                                {{ $item->vco_name }}</h5>
+                                        </a>
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                            {{ $item->strory_description }}</p>
+                                        <small>{{ $item->created_at->diffForHumans() }}</small>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+
+                    </div> --}}
+
+
+
+                    <div class="grid md:grid-cols-2 gap-8">
+
+                        <div
+                            class="bg-gray-50 light:bg-gray-800 border border-gray-200 light:border-gray-700 rounded-lg p-8 md:p-12">
+                            <a href="#"
+                                class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md light:bg-gray-700 light:text-green-400 mb-2">
+                                <svg class="w-2.5 h-2.5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 18 18">
+                                    <path
+                                        d="M17 11h-2.722L8 17.278a5.512 5.512 0 0 1-.9.722H17a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1ZM6 0H1a1 1 0 0 0-1 1v13.5a3.5 3.5 0 1 0 7 0V1a1 1 0 0 0-1-1ZM3.5 15.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM16.132 4.9 12.6 1.368a1 1 0 0 0-1.414 0L9 3.55v9.9l7.132-7.132a1 1 0 0 0 0-1.418Z" />
+                                </svg>
+                                ASDSP
+                            </a>
+                            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">ASDSP II National and County Staffs (130 technical staffs and 30 drivers) sensitization session on Road Safety mainstreaming in programme implementation by NTSA Regional Manager, Kisumu at Imperial Sarova Hotel <a href="https://twitter.com/SwedeninKE?ref_src=twsrc%5Etfw">@SwedeninKE</a> <a href="https://twitter.com/kilimoKE?ref_src=twsrc%5Etfw">@kilimoKE</a> <a href="https://twitter.com/DrRonohpaul?ref_src=twsrc%5Etfw">@DrRonohpaul</a> <a href="https://twitter.com/KenyaGovernors?ref_src=twsrc%5Etfw">@KenyaGovernors</a> <a href="https://twitter.com/ntsa_kenya?ref_src=twsrc%5Etfw">@ntsa_kenya</a> <a href="https://t.co/t2fkupSUGl">pic.twitter.com/t2fkupSUGl</a></p>&mdash; ASDSP II (@TIMPSPORTAL) <a href="https://twitter.com/TIMPSPORTAL/status/1744682575258386555?ref_src=twsrc%5Etfw">January 9, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            
+                        </div>
+
+                        <div
+                            class="bg-gray-50 light:bg-gray-800 border border-gray-200 light:border-gray-700 rounded-lg p-8 md:p-12">
+
+                            <a href="#"
+                                class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md light:bg-gray-700 light:text-green-400 mb-2">
+                                <svg class="w-2.5 h-2.5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 18 18">
+                                    <path
+                                        d="M17 11h-2.722L8 17.278a5.512 5.512 0 0 1-.9.722H17a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1ZM6 0H1a1 1 0 0 0-1 1v13.5a3.5 3.5 0 1 0 7 0V1a1 1 0 0 0-1-1ZM3.5 15.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM16.132 4.9 12.6 1.368a1 1 0 0 0-1.414 0L9 3.55v9.9l7.132-7.132a1 1 0 0 0 0-1.418Z" />
+                                </svg>
+                                ASDSP
+                            </a>
+                            <blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/9a0W6a7dB3">pic.twitter.com/9a0W6a7dB3</a></p>&mdash; ASDSP II (@TIMPSPORTAL) <a href="https://twitter.com/TIMPSPORTAL/status/1744350235986428033?ref_src=twsrc%5Etfw">January 8, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            {{-- Twitter --}}
 
         </div>
         <hr>

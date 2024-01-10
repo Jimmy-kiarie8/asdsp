@@ -49,7 +49,7 @@
                                     </div>
                                 </div>
                                 <!-- The table listing the files available for upload/download -->
-                                <h3 class="text-center">Drag and Drop Files Here to upload.</h3>
+                                <h3 class="text-center">Drag and Drop Files Here to upload. Image Size (Less than 2MBs)</h3>
                                 <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
                             </form>
                             <br>
