@@ -10582,7 +10582,7 @@ footer {
 
 /* Responsive styles */
 @media (max-width: 980px) {
-  .video-container {
+  #header-video .video-container {
     height: 43% !important;
   }
 
@@ -10590,7 +10590,7 @@ footer {
     display: block !important;
   }
 
-  .showcase {
+  #header-video .showcase {
     height: 50vh !important;
   }
 

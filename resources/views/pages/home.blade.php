@@ -5,7 +5,7 @@
         @include('pages.inc.header')
 
 
-        <div style="">
+        <div style="" id="header-video">
             <section class="showcase">
                 <div class="video-container">
                     <video src="https://mag.co.ke/apps/public/media/background.mp4" autoplay muted loop></video>
@@ -576,8 +576,25 @@
 
 
             {{-- Twitter --}}
+
+            {{-- <section class="bg-white light:bg-gray-900" style="border-radius: 70px 70px 0 0;">
+                <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-6 lg:px-6">
+                    <div id="tweets-container" style="display: flex; flex-wrap: wrap;">
+                        
+                        <a class="twitter-timeline" data-width="600" data-height="700" data-theme="light"
+                            href="https://twitter.com/TIMPSPORTAL?ref_src=twsrc%5Etfw">Tweets by TIMPSPORTAL</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                        <a href="https://twitter.com/twitter?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+                            data-show-count="false">Follow @twitter</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </div>
+
+            </section> --}}
+
             <section class="bg-white" style="background: #fff;">
-                <div class="py-8 mx-auto lg:py-16 lg:px-12">
+                <div class="py-8 mx-auto max-w-screen-xl lg:py-16 lg:px-12">
                     <div class="text-center">
                         <a href="https://twitter.com/TIMPSPORTAL" target="_blank"
                             class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
@@ -591,59 +608,33 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </a>
-                        <h4 style=" font-size: 38px;
-            font-weight: bold;">
-                            Twitter Feed</h4>
+                        <h4 style=" font-size: 38px;font-weight: bold;">
+                            Social Media Feed</h4>
                         <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
                             style="    text-align: center !important;">Get the
-                            latest tweets, success stories and testimonial from around the country.
+                            latest tweets, videos, success stories and testimonial from around the country.
 
                         </p>
                     </div>
-                    {{-- <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:space-y-0" style="    gap: 0.5rem">
-                        @foreach ($successStories as $item)
-                            <div>
-                                <div
-                                    class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                    <a href="#">
-                                        <img class="rounded-t-lg"
-                                            src="http://197.156.140.250:1080/sites/default/files/styles/height/public/2023-06/solar%20%281%29.jpg?itok=HWAobr5t"
-                                            alt="" />
-                                    </a>
-                                    <div class="p-5" id="hover-green">
-                                        <a href="#">
-                                            <h5
-                                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                                {{ $item->vco_name }}</h5>
-                                        </a>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                                            {{ $item->strory_description }}</p>
-                                        <small>{{ $item->created_at->diffForHumans() }}</small>
-                                       
-                                    </div>
-                                </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+
+                        <div
+                            class="bg-gray-50 light:bg-gray-800 border border-gray-200 light:border-gray-700 rounded-lg p-2 ">
+                            <a href="#"
+                                class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md light:bg-gray-700 light:text-green-400 mb-2">
+                                <svg class="w-2.5 h-2.5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 18 18">
+                                    <path
+                                        d="M17 11h-2.722L8 17.278a5.512 5.512 0 0 1-.9.722H17a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1ZM6 0H1a1 1 0 0 0-1 1v13.5a3.5 3.5 0 1 0 7 0V1a1 1 0 0 0-1-1ZM3.5 15.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM16.132 4.9 12.6 1.368a1 1 0 0 0-1.414 0L9 3.55v9.9l7.132-7.132a1 1 0 0 0 0-1.418Z" />
+                                </svg>
+                                ASDSP
+                            </a>
+                            <div id="tweets-container" style="display: flex; flex-wrap: wrap;">
+                                <!-- Tweets will be dynamically inserted here -->
+                                <a class="twitter-timeline" data-width="700" data-height="600" data-theme="light" href="https://twitter.com/TIMPSPORTAL?ref_src=twsrc%5Etfw">Tweets by TIMPSPORTAL</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                             </div>
-                        @endforeach
 
-                    </div> --}}
-
-
-
-                    <div class="grid md:grid-cols-3 gap-8">
-
-                        <div
-                            class="bg-gray-50 light:bg-gray-800 border border-gray-200 light:border-gray-700 rounded-lg p-2 ">
-                            <a href="#"
-                                class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md light:bg-gray-700 light:text-green-400 mb-2">
-                                <svg class="w-2.5 h-2.5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="currentColor" viewBox="0 0 18 18">
-                                    <path
-                                        d="M17 11h-2.722L8 17.278a5.512 5.512 0 0 1-.9.722H17a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1ZM6 0H1a1 1 0 0 0-1 1v13.5a3.5 3.5 0 1 0 7 0V1a1 1 0 0 0-1-1ZM3.5 15.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM16.132 4.9 12.6 1.368a1 1 0 0 0-1.414 0L9 3.55v9.9l7.132-7.132a1 1 0 0 0 0-1.418Z" />
-                                </svg>
-                                ASDSP
-                            </a>
-                            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">ASDSP II National and County Staffs (130 technical staffs and 30 drivers) sensitization session on Road Safety mainstreaming in programme implementation by NTSA Regional Manager, Kisumu at Imperial Sarova Hotel <a href="https://twitter.com/SwedeninKE?ref_src=twsrc%5Etfw">@SwedeninKE</a> <a href="https://twitter.com/kilimoKE?ref_src=twsrc%5Etfw">@kilimoKE</a> <a href="https://twitter.com/DrRonohpaul?ref_src=twsrc%5Etfw">@DrRonohpaul</a> <a href="https://twitter.com/KenyaGovernors?ref_src=twsrc%5Etfw">@KenyaGovernors</a> <a href="https://twitter.com/ntsa_kenya?ref_src=twsrc%5Etfw">@ntsa_kenya</a> <a href="https://t.co/t2fkupSUGl">pic.twitter.com/t2fkupSUGl</a></p>&mdash; ASDSP II (@TIMPSPORTAL) <a href="https://twitter.com/TIMPSPORTAL/status/1744682575258386555?ref_src=twsrc%5Etfw">January 9, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            
                         </div>
 
 
@@ -659,25 +650,10 @@
                                 </svg>
                                 ASDSP
                             </a>
-                            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Good morning? Another good reason to sample out and venture into value chains that we do promote: <br>1. Local goat meat<br>2. Indigenous chicken and,<br>3. Honey <a href="https://t.co/4kf1JTPMUq">pic.twitter.com/4kf1JTPMUq</a></p>&mdash; ASDSP II West Pokot County (@AsdspC) <a href="https://twitter.com/AsdspC/status/1353241605067714560?ref_src=twsrc%5Etfw">January 24, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            
+                            <iframe width="560" height="600" src="https://www.youtube.com/embed/H1INAbqyYYo?si=qnzv0gBxx7naRDrQ&amp;start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
                         </div>
 
-                        <div
-                            class="bg-gray-50 light:bg-gray-800 border border-gray-200 light:border-gray-700 rounded-lg p-2 ">
-
-                            <a href="#"
-                                class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md light:bg-gray-700 light:text-green-400 mb-2">
-                                <svg class="w-2.5 h-2.5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="currentColor" viewBox="0 0 18 18">
-                                    <path
-                                        d="M17 11h-2.722L8 17.278a5.512 5.512 0 0 1-.9.722H17a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1ZM6 0H1a1 1 0 0 0-1 1v13.5a3.5 3.5 0 1 0 7 0V1a1 1 0 0 0-1-1ZM3.5 15.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM16.132 4.9 12.6 1.368a1 1 0 0 0-1.414 0L9 3.55v9.9l7.132-7.132a1 1 0 0 0 0-1.418Z" />
-                                </svg>
-                                ASDSP
-                            </a>
-                            <blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/9a0W6a7dB3">pic.twitter.com/9a0W6a7dB3</a></p>&mdash; ASDSP II (@TIMPSPORTAL) <a href="https://twitter.com/TIMPSPORTAL/status/1744350235986428033?ref_src=twsrc%5Etfw">January 8, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            
-                        </div>
                     </div>
                 </div>
             </section>
@@ -688,3 +664,30 @@
         @include('pages.inc.footer')
     </div>
 @endsection
+
+<style>
+    .tweet {
+        flex-basis: 33.3333%;
+        /* for 3 columns */
+        border: 1px solid #ddd;
+        margin: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+</style>
+
+<script>
+    function refreshTwitterWidget() {
+        // Remove the existing iframe
+        let iframe = document.querySelector('iframe.twitter-timeline');
+        if (iframe) {
+            iframe.remove();
+        }
+
+        // Load a new iframe
+        twttr.widgets.load(); // This function is provided by the Twitter widget script
+    }
+
+    // Refresh the widget every 5 minutes
+    setInterval(refreshTwitterWidget, 300000); // 300000 milliseconds = 5 minutes
+</script>
