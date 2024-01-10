@@ -10344,7 +10344,7 @@ body.stm_transparent_header_disabled.stm_title_box_disabled.stm_breadcrumbs_enab
 }
 
 .stm-header__row_color_top a:hover {
-  color: #1b900c;
+  color: #000;
 }
 
 .stm-header__row_color_top li:hover a {

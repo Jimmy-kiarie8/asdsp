@@ -57,7 +57,7 @@
       </div>
   </form>
   </div>
-  <div class="text-center text-gray-500 text-sm mt-4">
+  <div class="text-center text-white-500 text-sm mt-4" >
       © 2021-{{ date('Y') }} ASDSP™. All Rights Reserved.
   </div>
 </footer>
