@@ -139,7 +139,7 @@ class SuccessStoryController extends Controller
       if($request->has('document')) {
         $file = $request->file('document');
         $path = Storage::disk('public')->put('documents', $file, 'public');
-        $model->document = '/storage/' . $path;
+        $model->document = '/storage/app/public/documents' . $path;
       }
   
       $model->save();
