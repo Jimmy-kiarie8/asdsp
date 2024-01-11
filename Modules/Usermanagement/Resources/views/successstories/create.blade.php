@@ -60,6 +60,7 @@
                                                     </span>
                                                 </div>
 
+
                                                 <div class="form-group col-md-6">
                                                     <label>Location</label>
                                                     <input type="text" name="location" class="form-control" required>
@@ -187,6 +188,22 @@
 
 
 
+                                </div>
+
+
+                            </div>
+                            <br>
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <legend>Attach Document</legend>
+
+                                    <div class="row">
+                                        <div id="image_array11"></div>
+                                    </div>
+                                    <input type="file" class="form-control validate" name="document" required>
+                                    <br />                                   
                                 </div>
 
 
