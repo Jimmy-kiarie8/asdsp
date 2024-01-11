@@ -264,6 +264,6 @@ class SuccessStoryController extends Controller
    */
   public function destroy($id)
   {
-    //
+    SuccessStory::find($id)->delete();
   }
 }
