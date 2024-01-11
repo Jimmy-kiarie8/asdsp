@@ -50,7 +50,7 @@
                                         </a>
                                         <p class="mb-3 font-normal text-gray-700 light:text-gray-400">
                                             {{ $item->strory_description }}</p>
-
+                                            {{ $item->id }}
                                             @if ($item->document)
                                                         
                                                 <a href="{{ $item->document }}" target="_blank"
