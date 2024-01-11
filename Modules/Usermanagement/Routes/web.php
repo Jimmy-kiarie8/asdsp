@@ -50,7 +50,7 @@
     Route::any('/SuccessStories/Create','SuccessStoryController@CReate');
     Route::any('/SuccessStories/Index','SuccessStoryController@Index');
     Route::any('/SuccessStories/fetchList','SuccessStoryController@fetchList');
-    Route::any('/SuccessStories/delete/{id}','SuccessStoryController@destroy');
+    // Route::any('/SuccessStories/delete/{id}','SuccessStoryController@destroy');
 
 
     Route::get('/Roles/Index', 'UsermanagementController@index');
