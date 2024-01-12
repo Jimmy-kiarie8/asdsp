@@ -381,8 +381,8 @@
     <script>
         function initMap() {
             var center = {
-                lat: {{ $innovation->inno_longitude }},
-                lng: {{ $innovation->inno_latitude }}
+                lat: {{ $innovation->inno_latitude }},
+                lng: {{ $innovation->inno_longitude }}
             };
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 10,
