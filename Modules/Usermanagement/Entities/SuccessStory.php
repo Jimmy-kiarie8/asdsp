@@ -2,6 +2,7 @@
 
 namespace Modules\Usermanagement\Entities;
 
+use App\Scopes\SuccessStoryScope;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Usermanagement\Entities\County;
 class SuccessStory extends Model
@@ -21,5 +22,14 @@ class SuccessStory extends Model
     public function node()
     {
         return $this->belongsTo(NodeType::class,'node_id');
+    }
+
+
+    /**
+     * The "booted" method of the model.
+     */
+    protected static function booted(): void
+    {
+        static::addGlobalScope(new SuccessStoryScope);
     }
 }

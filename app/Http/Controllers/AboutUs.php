@@ -126,7 +126,7 @@ class AboutUs extends Controller
 
         $totalAdverts = InnovationCategory::count();
         $users = Innovation::whereNull('is_deleted')->count();
-        $applicants = SuccessStory::whereNull('is_deleted')->count();
+        $applicants = SuccessStory::withoutGlobalScopes()->whereNull('is_deleted')->count();
         $applications = Publication::whereNull('is_deleted')->count();
 
         $data['categories'] = $totalAdverts;
@@ -172,10 +172,10 @@ class AboutUs extends Controller
 
         $data['valuechains'] = ValueChain::all();
 
-        $data['innovations'] = SuccessStory::whereNull('is_deleted')->get();
+        $data['innovations'] = SuccessStory::withoutGlobalScopes()->whereNull('is_deleted')->get();
         $data['counties'] = County::all();
         $data['nodes'] = NodeType::all();
-        $publications = SuccessStory::paginate();
+        $publications = SuccessStory::withoutGlobalScopes()->paginate();
         return view("pages.success-story", compact('data', 'publications'));
     }
 
@@ -183,9 +183,8 @@ class AboutUs extends Controller
     {
         $data['page_title'] = "Publications";
 
-        $publications = SuccessStory::paginate();
+        $publications = SuccessStory::withoutGlobalScopes()->paginate();
         return view("pages.publications", compact('data', 'publications'));
-        return view("frontend.publications", $data);
     }
 
     public function contactus()

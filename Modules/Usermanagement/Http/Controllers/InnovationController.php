@@ -87,11 +87,53 @@ class InnovationController extends Controller
     public function fetchSubmittedList()
     {
 
-        $models = DB::select("SELECT innovations.id,vco_name,inno_vca_benefit,inno_contacttel,inno_contactname,innovation_status,innovation_type,inno_subcounty,inno_ward,inno_location,inno_latitude,inno_longitude,inno_name,inno_code,inno_cover_image,format(inno_cost,2) inno_cost,inno_sources,inno_male_vca,inno_female_vca,inno_youth_vca,publish_status,value_name,node_name,inno_vco_promoted,innovations.created_at FROM innovations
-left join node_types on node_types.id=innovations.node_id
-left join value_chains on  value_chains.id=innovations.value_chain_id
-where 1  
-", [$this->sid]);
+        //         $models = DB::select("SELECT innovations.id,vco_name,inno_vca_benefit,inno_contacttel,inno_contactname,innovation_status,innovation_type,inno_subcounty,inno_ward,inno_location,inno_latitude,inno_longitude,inno_name,inno_code,inno_cover_image,format(inno_cost,2) inno_cost,inno_sources,inno_male_vca,inno_female_vca,inno_youth_vca,publish_status,value_name,node_name,inno_vco_promoted,innovations.created_at FROM innovations
+        // left join node_types on node_types.id=innovations.node_id
+        // left join value_chains on  value_chains.id=innovations.value_chain_id
+        // where 1  
+        // ", [$this->sid]);
+        $models = DB::table('innovations')
+            ->leftJoin('node_types', 'node_types.id', '=', 'innovations.node_id')
+            ->leftJoin('value_chains', 'value_chains.id', '=', 'innovations.value_chain_id')
+            ->select(
+                'innovations.id',
+                'vco_name',
+                'inno_vca_benefit',
+                'inno_contacttel',
+                'inno_contactname',
+                'innovation_status',
+                'innovation_type',
+                'inno_subcounty',
+                'inno_ward',
+                'inno_location',
+                'inno_latitude',
+                'inno_longitude',
+                'inno_name',
+                'inno_code',
+                'inno_cover_image',
+                DB::raw('FORMAT(inno_cost, 2) as inno_cost'),
+                'inno_sources',
+                'inno_male_vca',
+                'inno_female_vca',
+                'inno_youth_vca',
+                'publish_status',
+                'value_chains.value_name',
+                'node_types.node_name',
+                'inno_vco_promoted',
+                'innovations.created_at'
+            );
+
+        // Check if the logged-in user is a County Co-ordinator
+        if (Auth::check() && Auth::user()->hasRole("County Co-ordinator")) {
+            $models = $models->where('innovations.created_by', '=', Auth::id());
+        }
+
+        // Execute the query
+
+        if (Auth::User()->hasRole("County Co-ordinator")) {
+            $models = $models->where('innovations.created_by', Auth::id());
+        }
+
         return Datatables::of($models)
             ->rawColumns(['action', 'inno_cover_image'])
 
@@ -147,7 +189,7 @@ where 1
 
         if ($request->isMethod("post")) {
             // return redirect()->back()->withErrors('You do not have permission to delete this innovation.');
-                if (Auth::user()->hasRole("SuperAdmin") || $model->created_by == Auth::id()) {
+            if (Auth::user()->hasRole("SuperAdmin") || $model->created_by == Auth::id()) {
                 // Your code for authorized users
                 $data = $request->all();
                 if (isset($data['confirm'])) {
@@ -259,11 +301,22 @@ where 1
 
     public function fetchList()
     {
-        $models = DB::select("SELECT innovations.id,county_name,vco_name,inno_vca_benefit,inno_contacttel,inno_contactname,innovation_status,innovation_type,inno_subcounty,inno_ward,inno_location,inno_latitude,inno_longitude,inno_name,inno_code,inno_cover_image,format(inno_cost,2) inno_cost,inno_sources,n.node_name,v.value_name,inno_male_vca,inno_female_vca,inno_youth_vca,publish_status,inno_vco_promoted,innovations.created_at FROM innovations
-left join node_types n on n.id=innovations.node_id
-left join value_chains v on v.id=innovations.value_chain_id 
-join counties c on c.id=innovations.county_id 
-where innovations.is_deleted is null ", [$this->sid, "Draft"]);
+        //         $models = DB::select("SELECT innovations.id,county_name,vco_name,inno_vca_benefit,inno_contacttel,inno_contactname,innovation_status,innovation_type,inno_subcounty,inno_ward,inno_location,inno_latitude,inno_longitude,inno_name,inno_code,inno_cover_image,format(inno_cost,2) inno_cost,inno_sources,n.node_name,v.value_name,inno_male_vca,inno_female_vca,inno_youth_vca,publish_status,inno_vco_promoted,innovations.created_at FROM innovations
+        // left join node_types n on n.id=innovations.node_id
+        // left join value_chains v on v.id=innovations.value_chain_id 
+        // join counties c on c.id=innovations.county_id 
+        // where innovations.is_deleted is null ", [$this->sid, "Draft"]);
+        $models = DB::table('innovations')
+            ->leftJoin('node_types as n', 'n.id', '=', 'innovations.node_id')
+            ->leftJoin('value_chains as v', 'v.id', '=', 'innovations.value_chain_id')
+            ->join('counties as c', 'c.id', '=', 'innovations.county_id')
+            ->selectRaw("innovations.id, county_name, vco_name, inno_vca_benefit, inno_contacttel, inno_contactname, innovation_status, innovation_type, inno_subcounty, inno_ward, inno_location, inno_latitude, inno_longitude, inno_name, inno_code, inno_cover_image, format(inno_cost, 2) as inno_cost, inno_sources, n.node_name, v.value_name, inno_male_vca, inno_female_vca, inno_youth_vca, publish_status, inno_vco_promoted, innovations.created_at")
+            ->whereNull('innovations.is_deleted');
+
+
+        if (Auth::User()->hasRole("County Co-ordinator")) {
+            $models = $models->where('innovations.created_by', Auth::id());
+        }
         return Datatables::of($models)
             ->rawColumns(['action', 'inno_cover_image'])
 
