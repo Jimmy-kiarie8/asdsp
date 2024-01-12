@@ -86,54 +86,11 @@ class InnovationController extends Controller
 
     public function fetchSubmittedList()
     {
-
-        //         $models = DB::select("SELECT innovations.id,vco_name,inno_vca_benefit,inno_contacttel,inno_contactname,innovation_status,innovation_type,inno_subcounty,inno_ward,inno_location,inno_latitude,inno_longitude,inno_name,inno_code,inno_cover_image,format(inno_cost,2) inno_cost,inno_sources,inno_male_vca,inno_female_vca,inno_youth_vca,publish_status,value_name,node_name,inno_vco_promoted,innovations.created_at FROM innovations
-        // left join node_types on node_types.id=innovations.node_id
-        // left join value_chains on  value_chains.id=innovations.value_chain_id
-        // where 1  
-        // ", [$this->sid]);
-        $models = DB::table('innovations')
-            ->leftJoin('node_types', 'node_types.id', '=', 'innovations.node_id')
-            ->leftJoin('value_chains', 'value_chains.id', '=', 'innovations.value_chain_id')
-            ->select(
-                'innovations.id',
-                'vco_name',
-                'inno_vca_benefit',
-                'inno_contacttel',
-                'inno_contactname',
-                'innovation_status',
-                'innovation_type',
-                'inno_subcounty',
-                'inno_ward',
-                'inno_location',
-                'inno_latitude',
-                'inno_longitude',
-                'inno_name',
-                'inno_code',
-                'inno_cover_image',
-                DB::raw('FORMAT(inno_cost, 2) as inno_cost'),
-                'inno_sources',
-                'inno_male_vca',
-                'inno_female_vca',
-                'inno_youth_vca',
-                'publish_status',
-                'value_chains.value_name',
-                'node_types.node_name',
-                'inno_vco_promoted',
-                'innovations.created_at'
-            );
-
-        // Check if the logged-in user is a County Co-ordinator
-        if (Auth::check() && Auth::user()->hasRole("County Co-ordinator")) {
-            $models = $models->where('innovations.created_by', '=', Auth::id());
-        }
-
-        // Execute the query
-
-        if (Auth::User()->hasRole("County Co-ordinator")) {
-            $models = $models->where('innovations.created_by', Auth::id());
-        }
-
+        $models = DB::select("SELECT innovations.id,vco_name,inno_vca_benefit,inno_contacttel,inno_contactname,innovation_status,innovation_type,inno_subcounty,inno_ward,inno_location,inno_latitude,inno_longitude,inno_name,inno_code,inno_cover_image,format(inno_cost,2) inno_cost,inno_sources,inno_male_vca,inno_female_vca,inno_youth_vca,publish_status,value_name,node_name,inno_vco_promoted,innovations.created_at FROM innovations
+        left join node_types on node_types.id=innovations.node_id
+        left join value_chains on  value_chains.id=innovations.value_chain_id
+        where 1  
+        ", [$this->sid]);
         return Datatables::of($models)
             ->rawColumns(['action', 'inno_cover_image'])
 
@@ -297,9 +254,78 @@ class InnovationController extends Controller
         }
     }
 
-
-
     public function fetchList()
+    {
+        $models = DB::select("SELECT innovations.id,county_name,vco_name,inno_vca_benefit,inno_contacttel,inno_contactname,innovation_status,innovation_type,inno_subcounty,inno_ward,inno_location,inno_latitude,inno_longitude,inno_name,inno_code,inno_cover_image,format(inno_cost,2) inno_cost,inno_sources,n.node_name,v.value_name,inno_male_vca,inno_female_vca,inno_youth_vca,publish_status,inno_vco_promoted,innovations.created_at FROM innovations
+            left join node_types n on n.id=innovations.node_id
+            left join value_chains v on v.id=innovations.value_chain_id 
+            join counties c on c.id=innovations.county_id 
+            where innovations.is_deleted is null ", [$this->sid, "Draft"]);
+        return Datatables::of($models)
+            ->rawColumns(['action', 'inno_cover_image'])
+
+            ->editColumn('inno_cover_image', function ($model) {
+
+                if (strlen($model->inno_cover_image) > 0) {
+
+                    $url = asset('uploads/' . $model->inno_cover_image);
+                } else {
+                    $url = asset("placeholder.png");
+                }
+
+
+                $view_url = url('/backend/directors/view/' . $model->id);
+
+                return '<img src=' . $url . ' data-title="View Manager-Summary View" border="0" width="120" height="100"  data-url="' . $view_url . '" class="img-rounded pop-modal" align="center" cursor="pointer"  style="cursor:pointer;border-radius:5%" title="View Details"    />';
+            })
+
+            ->addColumn('action', function ($model) {
+                $edit_url = url('/System/Entities/EditDetails/' . $model->id);
+                $trainee_url = url('/System/TrainingModule/AddAttendance/' . $model->id);
+                $submit_url = url('/System/Innovations/Submit/' . $model->id);
+                $edit_url = url('/System/Innovations/EditCategory/' . $model->id);
+                $beneficiary_edit_url = url('/System/Innovations/EditBeneficiary/' . $model->id);
+                $edit_ci_url = url('/System/Innovations/EditCoverImage/' . $model->id);
+
+                $delete_url = url('/System/Innovations/DeleteInnovation/' . $model->id);
+                $view_url = url('/System/TrainingModule/ViewEvidence/' . $model->id);
+                $gallery_url = url('/System/TrainingModule/ViewGallery/' . $model->id);
+                return '
+
+                         <div class="dropdown">
+  <button class="btn btn-success btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+
+  <li><a style="cursor:pointer;" class="reject-modal"   data-title="Edit" href="/System/Innovations/edit/' . $model->id . '"><i class="icon-camera-retro"></i>Edit</a></li>
+
+     <li><a style="cursor:pointer;" class="reject-modal"   data-title="Edit Category" data-url="' . $edit_url . '"><i class="icon-camera-retro"></i>Edit Category</a></li>
+
+
+     <li><a style="cursor:pointer;" class="reject-modal"   data-title="Edit Beneficiaries" data-url="' . $beneficiary_edit_url . '"><i class="icon-camera-retro"></i>Edit Beneficiaies</a></li>
+
+      <li><a style="cursor:pointer;" class="reject-modal"   data-title="Edit Cover Image" data-url="' . $edit_ci_url . '"><i class="icon-pencil"></i>Edit Cover Image</a></li>
+
+
+     <li><a style="cursor:pointer;" class="reject-modal"   data-title="Submit to NPC For Review" data-url="' . $submit_url . '"><i class="icon-camera-retro"></i>Submit to NPS</a></li>
+
+
+     <li><a style="cursor:pointer;" class="reject-modal"   data-title="View Gallery" data-url="' . $gallery_url . '"><i class="icon-camera-retro"></i>Innovation Gallery</a></li>
+
+
+
+     <li><a style="cursor:pointer;" class="reject-modal"   data-title="Delete Innovation" data-url="' . $delete_url . '"><i class="icon-trash"></i>Delete</a></li>
+
+     
+    
+    </ul>
+</div> 
+';
+            })->make(true);
+    }
+
+
+    public function fetchList1()
     {
         //         $models = DB::select("SELECT innovations.id,county_name,vco_name,inno_vca_benefit,inno_contacttel,inno_contactname,innovation_status,innovation_type,inno_subcounty,inno_ward,inno_location,inno_latitude,inno_longitude,inno_name,inno_code,inno_cover_image,format(inno_cost,2) inno_cost,inno_sources,n.node_name,v.value_name,inno_male_vca,inno_female_vca,inno_youth_vca,publish_status,inno_vco_promoted,innovations.created_at FROM innovations
         // left join node_types n on n.id=innovations.node_id
