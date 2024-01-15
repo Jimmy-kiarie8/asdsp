@@ -124,6 +124,7 @@
                                                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
                                                     id="line-breaks">
                                                     {{ $item->inno_name }}</h5>
+                                            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 light:text-gray-500">{{ $item->created_at->diffForHumans() }}</time>
                                             </a>
                                             <div class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="line-breaks">
                                                 <p id="p-breaks">{!! strip_tags($item->inno_description) !!}</p>

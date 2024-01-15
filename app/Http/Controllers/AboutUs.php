@@ -137,7 +137,8 @@ class AboutUs extends Controller
         //  $inovations = Innovation::paginate(12);
         $inovations = Innovation::select(
             'innovations.id',
-            'vco_name',
+        'innovations.created_at',
+        'vco_name',
             'inno_name',
             'inno_cover_image',
             'inno_description',

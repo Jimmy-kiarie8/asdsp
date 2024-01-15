@@ -43,6 +43,7 @@ Route::get('/', function () {
     $inovations = Innovation::select(
         'innovations.id',
         'vco_name',
+        'innovations.created_at',
         'inno_name',
         'inno_cover_image',
         'inno_description',
@@ -94,6 +95,7 @@ Route::get('/innovation-list_', function () {
     //  $inovations = Innovation::paginate(12);
     $inovations = Innovation::select(
         'innovations.id',
+        'innovations.created_at',
         'vco_name',
         'inno_name',
         'inno_cover_image',

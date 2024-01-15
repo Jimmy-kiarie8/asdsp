@@ -13,8 +13,7 @@
                 </svg>
                 TIMPs Portal
             </a>
-            <h1 class="text-gray-900 light:text-white text-3xl md:text-5xl font-extrabold mb-2">Other Success
-                Stories</h1>
+            <h1 class="text-gray-900 light:text-white text-3xl md:text-5xl font-extrabold mb-2">ASDSP Publications</h1>
             <p class="text-lg font-normal text-gray-500 light:text-gray-400 mb-6">The programme is implemented by the Government of Kenya (National and 47 county governments) with strong participation of the private sector as direct beneficiaries or service providers. It is financed by the Government of Kenya, Sida and EU for a period of five years (2017-2022).</p>
 
         </div>
