@@ -35,6 +35,7 @@ use Excel;
 use App\Upload;
 use App\Imports\MemberImport;
 use App\Helpers\Helper;
+use Illuminate\Support\Facades\Log;
 use Modules\Usermanagement\Entities\UnitOfMeasure;
 use Modules\Usermanagement\Entities\Training;
 use Modules\Usermanagement\Entities\TrainingAttendance;
@@ -240,10 +241,11 @@ class InnovationController extends Controller
             $file->move(public_path('uploads'), $filename);
 
             $innovationimage = new InnovationImage();
-            $innovationimage->image_id = $filename;
+            $innovationimage->image_id = '/public/' . $filename;
             $innovationimage->innovation_id = $id;
             $innovationimage->save();
             $innovation = Innovation::find($id);
+
 
             $innovation->inno_cover_image = $filename;
             $innovation->save();

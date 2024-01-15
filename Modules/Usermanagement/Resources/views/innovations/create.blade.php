@@ -261,7 +261,7 @@
                                             style="width: 100%;height: 250px;" />
                                         <!--<div id="image_array1"   ></div> Use This if You want to display Multiple Images-->
                                         <input type="hidden" class="form-control validate" name="primary_image"
-                                            value="" id="img_id_cover" required>
+                                            value="" id="img_id_cover" required  accept="image/png, image/jpeg, image/gif">
                                         <br />
                                         <a href="#modal-message" class="uploadmodalwidget btn btn-default btn-sm"
                                             data-toggle="modal" id="uploadmodal" data-inputid="img_id_cover"

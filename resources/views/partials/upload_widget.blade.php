@@ -20,7 +20,7 @@
                                         <span class="btnu btn btn-success fileinput-button">
                                             <i class="glyphicon glyphicon-plus"></i>
                                             <span>Upload Images...</span>
-                                            <input type="file" name="files[]" multiple >
+                                            <input type="file" name="files[]" multiple  accept="image/png, image/jpeg, image/gif">
                                         </span>
                                         <!-- <button type="submit" class="btn btn-primary start">
                                             <i class="glyphicon glyphicon-upload"></i>

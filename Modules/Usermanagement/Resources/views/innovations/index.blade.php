@@ -4,11 +4,9 @@
 @section('content')
     <p>
 
-        <a title="Add New Department" href="<?= url('/System/Innovations/Create') ?>" class="btn btn-sm btn-info"><span
-                class="fa fa-plus"><span>New Innovation</a>
+        <a title="Add New Department" href="<?= url('/System/Innovations/Create') ?>" class="btn btn-sm btn-info"><span class="fa fa-plus"><span>New Innovation</a>
 
-        <a href="<?= url('/System/Innovations/Index') ?>" class="btn btn-sm btn-success"><span class="fa fa-bars"><span>List of
-                    Innovations</a>
+        <a href="<?= url('/System/Innovations/Index') ?>" class="btn btn-sm btn-success"><span class="fa fa-bars"><span>List of Innovations</a>
 
     </p>
 
