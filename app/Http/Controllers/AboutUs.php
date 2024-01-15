@@ -106,7 +106,7 @@ class AboutUs extends Controller
                 ->orWhere('inno_contactname', 'Like', "%{$search}%")
                 ->orWhere('inno_sources', 'Like', "%{$search}%")
                 ->orWhere('vco_name', 'Like', "%{$search}%");
-        })->paginate(8);
+        })->latest()->paginate(8);
 
 
 
