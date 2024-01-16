@@ -5,7 +5,7 @@ namespace Modules\Usermanagement\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 
-use App\Http\Controllers\Controller ;
+use App\Http\Controllers\Controller;
 use Modules\Usermanagement\Entities\Department;
 use Modules\Usermanagement\Entities\County;
 

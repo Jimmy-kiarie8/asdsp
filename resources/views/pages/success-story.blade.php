@@ -41,7 +41,10 @@
                     {{-- <div id="hover-green"></div> --}}
                     <h2 class="text-gray-900 light:text-white text-3xl font-extrabold mb-2">{{$item->vco_name}}</h2>
 
-                    <div id="line-breaks">
+                    <div style="    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;">
                     <p class="text-lg font-normal text-gray-500 light:text-gray-400 mb-4">{{$item->strory_description}}</p>
                 </div>
                     <a href="/media/docs/NEWSLETTER_12.pdf" target="_blank"
@@ -50,7 +53,7 @@
                         <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" /> 
                         </svg>
                     </a>
 
@@ -116,5 +119,6 @@
         </div>
     </section>
 
+    @include('pages.inc.social-share')
     @include('pages.inc.footer')
 @endsection

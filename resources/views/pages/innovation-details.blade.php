@@ -18,7 +18,7 @@
                 <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased" id="innovations">
                     <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
                         <article
-                            class="mx-auto w-full max-w-full format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+                            class="mx-auto w-full max-w-full format format-sm sm:format-base lg:format-lg format-green dark:format-invert">
                             <header class="mb-4 lg:mb-6 not-format">
                                 <address class="flex items-center mb-6 not-italic">
                                     <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
@@ -155,8 +155,8 @@
                                                 <path
                                                     d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                                             </svg>
-                                            Type <b> 
-                                                
+                                            Type <b>
+
                                                 {!! strip_tags($innovation->innovation_type) !!}
                                             </b>
                                         </li>
@@ -167,7 +167,7 @@
                                                 <path
                                                     d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                                             </svg>
-                                            Source: <b> 
+                                            Source: <b>
                                                 {!! strip_tags($innovation->inno_sources) !!}
                                             </b>
                                         </li>
@@ -213,10 +213,19 @@
 
 
                         </article>
+
+
+
                         </section>
                         </article>
                     </div>
                 </main>
+
+
+
+                @include('pages.inc.social-share')
+
+
 
 
                 @include('pages.success-inc')

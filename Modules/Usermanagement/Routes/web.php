@@ -15,6 +15,8 @@
     Route::any('/Dashboard/getStatisticsByBeneficiary','DashboardController@getStatisticsByBeneficiary');
     Route::any('/Reports/LoadDefault','DashboardController@LoadDefault');
 
+    Route::any('/reports-upload','CountyReportController@store')->name('reportUpload');
+
      Route::any('/Entities/GetValueChains/{id}','ValueChainController@GetCountyValues');
 
      Route::any('/Entities/GetSubCounties/{id}','OrgainizationController@GetSubCounties');

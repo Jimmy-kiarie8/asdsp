@@ -10958,3 +10958,23 @@ footer .max-w-6xl {
 
 
 }
+
+
+#socials {
+  margin-left: 15%;
+}
+#socials i {
+  font-size: 30px;
+  border: 1px solid #3333332b;
+  margin: 10px;
+  border-radius: 50px;
+  padding: 10px;
+  background: #ffffff;
+  color: #03d56b;
+}
+
+
+#socials i:hover {
+  background: #03d56b;
+  color: #fff;
+}

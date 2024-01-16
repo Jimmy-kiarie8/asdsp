@@ -176,8 +176,9 @@ class AboutUs extends Controller
         $data['innovations'] = SuccessStory::withoutGlobalScopes()->whereNull('is_deleted')->get();
         $data['counties'] = County::all();
         $data['nodes'] = NodeType::all();
+        $innovation = [];
         $publications = SuccessStory::withoutGlobalScopes()->paginate();
-        return view("pages.success-story", compact('data', 'publications'));
+        return view("pages.success-story", compact('data', 'publications', 'innovation'));
     }
 
     public function publications()
