@@ -2,16 +2,7 @@
 
 
 @section('content')
-<div class="card">
-    <div class="card-header">
-      Featured
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
+
     <div class="card" style="width: 78rem;">
         <div class="card-body">
             <form class="container" method="POST" action="{{ $url }}" enctype="multipart/form-data">
@@ -48,9 +39,10 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Title</th>
+                <th scope="col">County</th>
+                <th scope="col">File</th>
+                <th scope="col">Uploaded on </th>
             </tr>
         </thead>
         <tbody>
@@ -58,7 +50,8 @@
                 <tr>
                     <th scope="row">{{ $index + 1 }}</th>
                     <td>{{ $item->title }}</td>
-                    <td>{{ $item->county_id }}</td>
+                    <td>{{ $item->county }}</td>
+                    <td><a href="{{ $item->path }}" target="_blank">Download</a></td>
                     <td>{{ $item->created_at->format('D d M Y') }}</td>
                 </tr>
             @endforeach
