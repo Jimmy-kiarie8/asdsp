@@ -1,8 +1,81 @@
 @extends('layouts.app')
 
+<style>
+    .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        width: 700px;
+        margin: 0 auto;
+        text-align: center;
+    }
 
+    /* Add a style for the form itself to ensure proper spacing and alignment */
+    form {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        /* or any width you prefer */
+        margin: auto;
+        /* to center the form in the page */
+        gap: 10px;
+        /* adds space between form elements */
+    }
+
+    /* Style for each input field and select box */
+    input,
+    select {
+        padding: 8px;
+        margin: 5px 0;
+        /* adds space above and below the input */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    /* Style for the submit button */
+    input[type="submit"] {
+        padding: 10px;
+        background-color: #4CAF50;
+        /* green background */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+        /* slightly darker green on hover */
+    }
+
+    /* Aligning the table cells and headers */
+    table {
+        width: 100%;
+        /* makes the table use the full width of its container */
+        border-collapse: collapse;
+        /* removes space between borders */
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        /* adds a border to the bottom of each cell */
+    }
+
+    th {
+        background-color: #f2f2f2;
+        /* adds a background color to the header cells */
+    }
+
+    /* Hover effect for rows */
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+</style>
 @section('content')
-
     <div class="card" style="width: 78rem;">
         <div class="card-body">
             <form class="container" method="POST" action="{{ $url }}" enctype="multipart/form-data">
@@ -35,26 +108,28 @@
     <br>
     <br>
     <br>
-    <table class="table table-striped table-hover table-bordered">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Title</th>
-                <th scope="col">County</th>
-                <th scope="col">File</th>
-                <th scope="col">Uploaded on </th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($reports as $index => $item)
+    <div class="card" style="width: 78rem;">
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
                 <tr>
-                    <th scope="row">{{ $index + 1 }}</th>
-                    <td>{{ $item->title }}</td>
-                    <td>{{ $item->county }}</td>
-                    <td><a href="{{ $item->path }}" target="_blank">Download</a></td>
-                    <td>{{ $item->created_at->format('D d M Y') }}</td>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">County</th>
+                    <th scope="col">File</th>
+                    <th scope="col">Uploaded on </th>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach ($reports as $index => $item)
+                    <tr>
+                        <th scope="row">{{ $index + 1 }}</th>
+                        <td>{{ $item->title }}</td>
+                        <td>{{ $item->county }}</td>
+                        <td><a href="{{ $item->path }}" target="_blank">Download</a></td>
+                        <td>{{ $item->created_at->format('D d M Y') }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 @endsection
