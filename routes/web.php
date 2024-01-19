@@ -150,6 +150,7 @@ Route::post('/contact-mail', '\App\Http\Controllers\AboutUs@contact_mail')->name
 
 
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
