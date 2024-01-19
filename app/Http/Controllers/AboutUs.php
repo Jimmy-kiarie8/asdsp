@@ -83,7 +83,7 @@ class AboutUs extends Controller
 
     public function Successstorydetails($id)
     {
-        $story = [];
+        return $story = SuccessStory::find($id);
         return view("pages.story-details", compact('story'));
     }
 
@@ -194,7 +194,7 @@ class AboutUs extends Controller
     {
         $data['page_title'] = "Publications";
 
-        $publications = SuccessStory::withoutGlobalScopes()->paginate();
+          $publications = Publication::paginate();
         return view("pages.publications", compact('data', 'publications'));
     }
 
