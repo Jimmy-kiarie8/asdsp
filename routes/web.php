@@ -140,7 +140,7 @@ Route::post('/contact-mail', '\App\Http\Controllers\AboutUs@contact_mail')->name
 
 Route::any('/innovation-list', '\App\Http\Controllers\AboutUs@innovation_list')->name('innovation-list');
 
-// Route::any('/Successstorydetails/{id}', '\App\Http\Controllers\AboutUs@Successstorydetails');
+Route::any('/Successstorydetails/{id}', '\App\Http\Controllers\AboutUs@Successstorydetails');
 
 
 
