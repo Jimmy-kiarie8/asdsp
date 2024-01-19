@@ -173,11 +173,18 @@ class AboutUs extends Controller
 
         $data['valuechains'] = ValueChain::all();
 
-        $data['innovations'] = SuccessStory::withoutGlobalScopes()->whereNull('is_deleted')->get();
+        $data['innovations'] = SuccessStory::withoutGlobalScopes()->latest()->whereNull('is_deleted')->get();
         $data['counties'] = County::all();
         $data['nodes'] = NodeType::all();
         $innovation = [];
-        $publications = SuccessStory::withoutGlobalScopes()->paginate();
+        $search = request('search');
+
+        $publications = SuccessStory::withoutGlobalScopes()->latest()->when($search, function ($q) use ($search) {
+            return $q->where('story_title', 'Like', "%{$search}%")
+                ->orWhere('strory_description', 'Like', "%{$search}%")
+                ->orWhere('story_cover_image', 'Like', "%{$search}%")
+                ->orWhere('story_location', 'Like', "%{$search}%");
+        })->paginate();
         return view("pages.success-story", compact('data', 'publications', 'innovation'));
     }
 

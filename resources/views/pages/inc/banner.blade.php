@@ -13,14 +13,18 @@ class="bg-white dark:bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs
     <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200">At ASDSP, our
         goal is not just to change the face of Kenyan agriculture but to uplift the lives of millions of Kenyans
         through sustainable and profitable agricultural practices.</p>
-    <form class="w-full max-w-md mx-auto" style="background: transparent" method="GET" action="{{ route('innovation-list') }}">
+    <form class="w-full max-w-md mx-auto" style="background: transparent" method="GET" action=" @if (Route::current()->getName() == 'successstories')
+    {{ route('successstories') }}"
+    @else
+    {{ route('innovation-list') }}"
+    @endif >
         <label for="default-email" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Email
             sign-up</label>
         <div class="relative">
             <div class="absolute inset-y-0 rtl:inset-x-0 start-0 flex items-center ps-3.5 pointer-events-none">
                 
             </div>
-            <input type="text" id="default-email"
+            <input type="text" id="default-email" name="search"
                 class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-green-500 focus:border-green-500 light:bg-gray-800 light:border-gray-700 light:placeholder-gray-400 light:text-white light:focus:ring-green-500 light:focus:border-green-500"
                 placeholder="Search..." required>
             <button type="submit"
