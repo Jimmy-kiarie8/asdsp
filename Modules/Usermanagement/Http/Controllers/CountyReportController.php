@@ -52,7 +52,7 @@ class CountyReportController extends Controller
             $validatedData = $request->validate([
                 'type' => 'required|string',
                 'title' => 'required|string',
-                'file' => 'required|file|mimetypes:text/csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+                'file' => 'required|file|mimetypes:text/csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation',
             ]);
 
             if ($request->type ===  "County" && !$request->county) {
@@ -70,7 +70,7 @@ class CountyReportController extends Controller
                     $path = Storage::disk('public')->put('reports', $file, 'public');
                     $report->title = $request->title;
                     $report->path = '/storage/app/public/' . $path;
-                    $report->county = $request->county;
+                    $report->county = ($request->county) ? $request->county : 'National';
                     $report->created_by = Auth::id();
                     $report->save();
                 }
@@ -82,12 +82,25 @@ class CountyReportController extends Controller
             }
         }
         $counties = County::pluck('county_name', 'id')->toArray();
+        $searchTerm = $request->search;
 
-        if ($request->search) {
-            $reports = CountyReport::where('county', 'like', "%{$request->search}%")->orWhere('title', 'like', "%{$request->search}%")->paginate(2);
+        if ($searchTerm) {
+            // $reports = CountyReport::where('county', 'like', "%{$request->search}%")->orWhere('title', 'like', "%{$request->search}%");
+
+            $reports = CountyReport::when(strcasecmp($searchTerm, 'national') === 0, function ($query) {
+                // When the search term is "national," return records with a null county
+                return $query->where('county', 'like', '%national%')
+                             ->orWhere('title', 'like', '%national%')
+                             ->orWhereNull('county');
+            }, function ($query) use ($searchTerm) {
+                // For other search terms, use the original conditions
+                return $query->where('county', 'like', "%$searchTerm%")
+                             ->orWhere('title', 'like', "%$searchTerm%");
+            });
         } else {
-            $reports = CountyReport::paginate();
+            $reports = new CountyReport;
         }
+        $reports = $reports->paginate();
         // return view('usermanagement::reports.county-upload', compact('url', 'counties', 'reports'))->with('success', 'File uploaded successfully!');
         return view('usermanagement::reports.county-upload', compact('url', 'counties', 'reports', 'successMessage'));
     }
