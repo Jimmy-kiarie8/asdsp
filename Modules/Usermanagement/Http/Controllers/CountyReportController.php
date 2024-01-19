@@ -86,7 +86,7 @@ class CountyReportController extends Controller
         if ($request->search) {
             $reports = CountyReport::where('county', 'like', "%{$request->search}%")->orWhere('title', 'like', "%{$request->search}%")->paginate(2);
         } else {
-            $reports = CountyReport::paginate(2);
+            $reports = CountyReport::paginate();
         }
         // return view('usermanagement::reports.county-upload', compact('url', 'counties', 'reports'))->with('success', 'File uploaded successfully!');
         return view('usermanagement::reports.county-upload', compact('url', 'counties', 'reports', 'successMessage'));
