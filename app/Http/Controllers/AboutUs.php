@@ -49,7 +49,7 @@ class AboutUs extends Controller
         $data['nodes'] = NodeType::all();
 
 
-        $innovation = Innovation::find($id);
+       $innovation = Innovation::with('county')->find($id);
         $categories = InnovationCategory::all();
 
         $innovations = Innovation::select(
