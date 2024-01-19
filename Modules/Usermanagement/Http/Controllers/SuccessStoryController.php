@@ -138,7 +138,15 @@ class SuccessStoryController extends Controller
 
       if($request->has('document')) {
         $file = $request->file('document');
-        $path = Storage::disk('public')->put('documents', $file, 'public');
+
+        $originalFileName = $file->getClientOriginalName();
+        $extension = $file->getClientOriginalExtension();
+
+        $fileName = $originalFileName . '.' . $extension;
+
+        // $path = Storage::disk('public')->put('documents', $file, 'public');
+        $path = Storage::disk('public')->putFileAs('documents', $file, $fileName, 'public');
+
         $model->document = '/storage/app/public/' . $path;
       }
   

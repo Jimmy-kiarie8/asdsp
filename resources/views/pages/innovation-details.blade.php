@@ -66,12 +66,12 @@
                                             id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
                                             aria-controls="dashboard" aria-selected="false">Description</button>
                                     </li>
-                                    <li class="me-2" role="presentation">
+                                    {{-- <li class="me-2" role="presentation">
                                         <button
                                             class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                                             id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
                                             aria-controls="settings" aria-selected="false">Lesson Challenges</button>
-                                    </li>
+                                    </li> --}}
                                     <li role="presentation">
                                         <button
                                             class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
@@ -112,10 +112,10 @@
                                     role="tabpanel" aria-labelledby="objective-tab">
                                     {!! strip_tags($innovation->inno_objective) !!}
                                 </div>
-                                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="settings"
+                                {{-- <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="settings"
                                     role="tabpanel" aria-labelledby="settings-tab">
                                     {!! strip_tags($innovation->inno_lesson_challenges) !!}
-                                </div>
+                                </div> --}}
                                 <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="contacts"
                                     role="tabpanel" aria-labelledby="contacts-tab">
 
@@ -203,12 +203,12 @@
                                 </div>
                                 <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="practical"
                                     role="tabpanel" aria-labelledby="practical-tab">
-                                    {!! strip_tags($innovation->innovation_output) !!}
+                                    {!! strip_tags($innovation->inno_vca_benefit) !!}
 
                                 </div>
                                 <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="output"
                                     role="tabpanel" aria-labelledby="output-tab">
-                                    {!! strip_tags($innovation->innovation_status) !!}
+                                    {!! strip_tags($innovation->inno_lesson_challenges) !!}
 
                                 </div>
 
