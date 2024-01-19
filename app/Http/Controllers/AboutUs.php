@@ -83,6 +83,11 @@ class AboutUs extends Controller
 
     public function Successstorydetails($id)
     {
+        $story = SuccessStory::find($id);
+       $innovation = Innovation::with('county')->find($id);
+        $categories = InnovationCategory::all();
+        return view("pages.innovation-details", compact('innovation', 'categories'));
+        return view("pages.story-details", compact('story'));
     }
 
     public function innovations()

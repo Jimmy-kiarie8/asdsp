@@ -146,17 +146,17 @@
          </ul>
 
 
-         <li>
-          <a href="{{ url('System/reports-upload') }}">
-              <i class="icon-angle-right"></i>
-              Reports Upload
-          </a>
-      </li>
      </li>
      <?php endif;?>
 
 
 
+     <li>
+        <a href="{{ url('System/reports-upload') }}">
+            <i class="icon-angle-right"></i>
+            Reports Upload
+        </a>
+    </li>
 
 
 

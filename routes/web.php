@@ -133,13 +133,14 @@ Route::any('/SuccessStories/Details/{id}', 'InnovationController@Details');
 Route::any('/publications', '\App\Http\Controllers\AboutUs@publications')->name('publications');
 Route::any('/contactus', '\App\Http\Controllers\AboutUs@contactus')->name('contact-us');
 Route::any('/innovationdetails/{id}', '\App\Http\Controllers\AboutUs@innovationdetails')->name('innovationdetails');
+Route::any('/successstories/{id}', '\App\Http\Controllers\AboutUs@Successstorydetails')->name('successstories');
 
 Route::post('/contact-mail', '\App\Http\Controllers\AboutUs@contact_mail')->name('contact-mail');
 
 
 Route::any('/innovation-list', '\App\Http\Controllers\AboutUs@innovation_list')->name('innovation-list');
 
-Route::any('/Successstorydetails/{id}', '\App\Http\Controllers\AboutUs@Successstorydetails');
+// Route::any('/Successstorydetails/{id}', '\App\Http\Controllers\AboutUs@Successstorydetails');
 
 
 
