@@ -40,11 +40,25 @@ class CountyReportController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request->all(); 
+
+
         $url = url()->current();
         $counties = [];
-
+        $successMessage = "";
 
         if ($request->isMethod("post")) {
+
+            $validatedData = $request->validate([
+                'type' => 'required|string',
+                'title' => 'required|string',
+                'file' => 'required|file|mimetypes:text/csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+            ]);
+
+            if ($request->type ===  "County" && !$request->county) {
+                // In a controller or route handler
+                return redirect()->back()->withErrors('County is required.');
+            }
             $data = $request->all();
 
             DB::beginTransaction();
@@ -61,15 +75,21 @@ class CountyReportController extends Controller
                     $report->save();
                 }
                 DB::commit();
+                $successMessage =  'File uploded';
             } catch (\Throwable $th) {
                 DB::rollback();
                 throw $th;
             }
         }
         $counties = County::pluck('county_name', 'id')->toArray();
-        $reports = CountyReport::paginate();
 
-        return view('usermanagement::reports.county-upload', compact('url', 'counties', 'reports'));
+        if ($request->search) {
+            $reports = CountyReport::where('county', 'like', "%{$request->search}%")->orWhere('title', 'like', "%{$request->search}%")->paginate(2);
+        } else {
+            $reports = CountyReport::paginate(2);
+        }
+        // return view('usermanagement::reports.county-upload', compact('url', 'counties', 'reports'))->with('success', 'File uploaded successfully!');
+        return view('usermanagement::reports.county-upload', compact('url', 'counties', 'reports', 'successMessage'));
     }
 
     /**

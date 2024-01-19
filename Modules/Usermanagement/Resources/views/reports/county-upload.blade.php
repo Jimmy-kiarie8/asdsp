@@ -8,7 +8,6 @@
         padding: 20px;
         width: 700px;
         margin: 0 auto;
-        text-align: center;
     }
 
     /* Add a style for the form itself to ensure proper spacing and alignment */
@@ -77,6 +76,21 @@
 </style>
 @section('content')
     <div class="card" style="width: 78rem;">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+        @if (isset($successMessage))
+            <div class="alert alert-success">
+                {{ $successMessage }}
+            </div>
+        @endif
         <div class="card-body">
             <form class="container" method="POST" action="{{ $url }}" enctype="multipart/form-data">
                 <?= csrf_field() ?>
@@ -87,9 +101,17 @@
                         <input type="text" class="form-control" id="inputEmail4" placeholder="Title" name="title">
                     </div>
                     <div class="form-group col-md-6">
+                        <label for="inputEmail4">County/National</label>
+                        <select class="form-control form-control-sm" name="type" required>
+                            <option value="">Select</option>
+                            <option value="County">County</option>
+                            <option value="National">National</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
                         <label for="inputEmail4">County</label>
                         <select class="form-control form-control-sm" name="county">
-
+                            <option value="">Select</option>
                             @foreach ($counties as $item)
                                 <option value="{{ $item }}">{{ $item }}</option>
                             @endforeach
@@ -100,7 +122,7 @@
                         <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file">
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-success">Submit</button>
             </form>
         </div>
     </div>
@@ -109,6 +131,19 @@
     <br>
     <br>
     <div class="card" style="width: 78rem;">
+        <form class="container" method="get" action="{{ $url }}">
+            <?= csrf_field() ?>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" placeholder="Search" name="search" value="{{ request()->search }}">
+                </div>
+                <div class="form-group col-md-2">
+                <button type="submit" class="btn btn-success">Search</button>
+                {{-- <input type="button" class="btn btn-success" id="inputEmail4" value="Search"> --}}
+                </div>
+            </div>
+        </form>
         <table class="table table-striped table-hover table-bordered">
             <thead>
                 <tr>
@@ -130,6 +165,10 @@
                     </tr>
                 @endforeach
             </tbody>
+
         </table>
+        <div>
+            {{ $reports->links() }}
+        </div>
     </div>
 @endsection
