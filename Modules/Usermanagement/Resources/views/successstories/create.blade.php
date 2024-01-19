@@ -202,7 +202,7 @@
                                     <div class="row">
                                         <div id="image_array11"></div>
                                     </div>
-                                    <input type="file" class="form-control validate" name="document">
+                                    <input type="file" class="form-control validate" name="document" required>
                                     <br />                                   
                                 </div>
 
