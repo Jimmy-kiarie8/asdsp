@@ -34,7 +34,7 @@
                 style="margin-left: 4px" target="_blank">
                 <i class="fa fa-envelope"></i>
             </a>
-            <a href="https://wa.me/?text=Check%20out%20this%20awesome%20website%3A%20{{ request()->url() }}"
+            <a href="https://wa.me/?text=ASDSP TIMPs PORTAL. {{ request()->url() }}"
                 target="_blank"
                 class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 dark:focus:ring-green-900"
                 style="margin-left: 4px">
