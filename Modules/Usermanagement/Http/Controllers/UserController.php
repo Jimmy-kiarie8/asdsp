@@ -188,15 +188,15 @@ class UserController extends Controller
                 $data = $request->all();
 
 
-                $this->validate($request, [
-
-                    'email' => 'required|email|unique:users,email',
-                    'password' => 'required|min:6|max:10|confirmed',
-                    'name' => 'required|string'
-                ]);
 
                 try {
 
+                // $this->validate($request, [
+
+                //     'email' => 'required|email|unique:users,email',
+                //     'password' => 'required|min:6|max:10|confirmed',
+                //     'name' => 'required|string'
+                // ]);
 
                     DB::beginTransaction();
                     $user = new User();
