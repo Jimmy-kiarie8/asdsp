@@ -64,6 +64,7 @@
     Route::any("/Role/EditDetails/{id}","UsermanagementController@EditDetails");
     Route::any("/Permissions/Index","UsermanagementController@Permissions");
     Route::any("/Permissions/fetchList","UsermanagementController@fetchPemissions");
+    Route::any("/Users/Delete/{id}","UsermanagementController@destroy");
     Route::any("/Users/CreateAccount","UserController@create");
     Route::any('/Users/Index',"UserController@Index");
     Route::any("/Users/fetchList","UserController@fetchUsers");

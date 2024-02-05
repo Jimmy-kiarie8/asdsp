@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Audit' => $baseDir . '/app/Audit.php',
+    'App\\Community' => $baseDir . '/app/Community.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\CountyReport' => $baseDir . '/app/CountyReport.php',
     'App\\Events\\ApplicantRegistrationEvent' => $baseDir . '/app/Events/ApplicantRegistrationEvent.php',
@@ -2940,6 +2941,7 @@ return array(
     'Modules\\Usermanagement\\Entities\\Ward' => $baseDir . '/Modules/Usermanagement/Entities/Ward.php',
     'Modules\\Usermanagement\\Http\\Controllers\\AuditController' => $baseDir . '/Modules/Usermanagement/Http/Controllers/AuditController.php',
     'Modules\\Usermanagement\\Http\\Controllers\\CountyController' => $baseDir . '/Modules/Usermanagement/Http/Controllers/CountyController.php',
+    'Modules\\Usermanagement\\Http\\Controllers\\CountyReportController' => $baseDir . '/Modules/Usermanagement/Http/Controllers/CountyReportController.php',
     'Modules\\Usermanagement\\Http\\Controllers\\DashboardController' => $baseDir . '/Modules/Usermanagement/Http/Controllers/DashboardController.php',
     'Modules\\Usermanagement\\Http\\Controllers\\DepartmentController' => $baseDir . '/Modules/Usermanagement/Http/Controllers/DepartmentController.php',
     'Modules\\Usermanagement\\Http\\Controllers\\DesignitionController' => $baseDir . '/Modules/Usermanagement/Http/Controllers/DesignitionController.php',

@@ -667,6 +667,7 @@ class ComposerStaticInit457d386a947c3e54de09daa3a139fb6b
 
     public static $classMap = array (
         'App\\Audit' => __DIR__ . '/../..' . '/app/Audit.php',
+        'App\\Community' => __DIR__ . '/../..' . '/app/Community.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\CountyReport' => __DIR__ . '/../..' . '/app/CountyReport.php',
         'App\\Events\\ApplicantRegistrationEvent' => __DIR__ . '/../..' . '/app/Events/ApplicantRegistrationEvent.php',
@@ -3600,6 +3601,7 @@ class ComposerStaticInit457d386a947c3e54de09daa3a139fb6b
         'Modules\\Usermanagement\\Entities\\Ward' => __DIR__ . '/../..' . '/Modules/Usermanagement/Entities/Ward.php',
         'Modules\\Usermanagement\\Http\\Controllers\\AuditController' => __DIR__ . '/../..' . '/Modules/Usermanagement/Http/Controllers/AuditController.php',
         'Modules\\Usermanagement\\Http\\Controllers\\CountyController' => __DIR__ . '/../..' . '/Modules/Usermanagement/Http/Controllers/CountyController.php',
+        'Modules\\Usermanagement\\Http\\Controllers\\CountyReportController' => __DIR__ . '/../..' . '/Modules/Usermanagement/Http/Controllers/CountyReportController.php',
         'Modules\\Usermanagement\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/Modules/Usermanagement/Http/Controllers/DashboardController.php',
         'Modules\\Usermanagement\\Http\\Controllers\\DepartmentController' => __DIR__ . '/../..' . '/Modules/Usermanagement/Http/Controllers/DepartmentController.php',
         'Modules\\Usermanagement\\Http\\Controllers\\DesignitionController' => __DIR__ . '/../..' . '/Modules/Usermanagement/Http/Controllers/DesignitionController.php',

@@ -142,9 +142,19 @@ Route::any('/innovation-list', '\App\Http\Controllers\AboutUs@innovation_list')-
 
 
 
+Route::any('/community', '\App\Http\Controllers\AboutUs@community')->name('community');
+Route::any('/community/create', '\App\Http\Controllers\AboutUs@community_create')->name('community_create');
+
+// Route::get('community', function () {
+//     return view('pages.community.index');
+// });
+
+// Route::get('community/create', function () {
+//     return view('pages.community.topic');
+// });
 
 
-
+Route::post('/community-post', '\App\Http\Controllers\AboutUs@community_post')->name('community-post');
 
 
 

@@ -191,12 +191,12 @@ class UserController extends Controller
 
                 try {
 
-                // $this->validate($request, [
+                    $this->validate($request, [
 
-                //     'email' => 'required|email|unique:users,email',
-                //     'password' => 'required|min:6|max:10|confirmed',
-                //     'name' => 'required|string'
-                // ]);
+                        'email' => 'required|email|unique:users,email',
+                        'password' => 'required|min:6|max:10|confirmed',
+                        'name' => 'required|string'
+                    ]);
 
                     DB::beginTransaction();
                     $user = new User();
@@ -352,6 +352,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::find($id)->delete();
     }
 }

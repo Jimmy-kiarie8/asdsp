@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Community;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Modules\Usermanagement\Entities\County;
@@ -49,7 +50,7 @@ class AboutUs extends Controller
         $data['nodes'] = NodeType::all();
 
 
-       $innovation = Innovation::with('county')->find($id);
+        $innovation = Innovation::with('county')->find($id);
         $categories = InnovationCategory::all();
 
         $innovations = Innovation::select(
@@ -139,8 +140,8 @@ class AboutUs extends Controller
         //  $inovations = Innovation::paginate(12);
         $inovations = Innovation::select(
             'innovations.id',
-        'innovations.created_at',
-        'vco_name',
+            'innovations.created_at',
+            'vco_name',
             'inno_name',
             'inno_cover_image',
             'inno_description',
@@ -194,7 +195,7 @@ class AboutUs extends Controller
     {
         $data['page_title'] = "Publications";
 
-          $publications = Publication::paginate();
+        $publications = Publication::paginate();
         return view("pages.publications", compact('data', 'publications'));
     }
 
@@ -215,5 +216,27 @@ class AboutUs extends Controller
 
         // Return back with a success message
         return redirect()->back()->with('success', 'Your message has been sent successfully!');
+    }
+
+
+    public function community_post(Request $request)
+    {
+        $community = new Community;
+
+        $community->title = $request->title;
+        $community->message = $request->message;
+        $community->save();
+        return redirect()->back()->with('success', 'Post successfully created!');
+    }
+
+    public function community()
+    {
+        $communities = Community::paginate();
+        return view('pages.community.index', compact('communities'));
+    }
+
+    public function community_create(Request $request)
+    {
+        return view('pages.community.topic');
     }
 }
