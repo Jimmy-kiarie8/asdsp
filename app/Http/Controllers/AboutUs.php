@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use App\Community;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
@@ -225,18 +226,48 @@ class AboutUs extends Controller
 
         $community->title = $request->title;
         $community->message = $request->message;
+        $community->name = $request->name;
+        $community->email = $request->email;
         $community->save();
+
+
+        session(['name' => $request->name, 'email' => $request->email, ]);
+
+
         return redirect()->back()->with('success', 'Post successfully created!');
     }
 
     public function community()
     {
-        $communities = Community::paginate();
+        $communities = Community::latest()->paginate();
         return view('pages.community.index', compact('communities'));
     }
 
-    public function community_create(Request $request)
+    public function community_create()
     {
-        return view('pages.community.topic');
+        $session = request()->session()->only(['name', 'email']);
+        return view('pages.community.topic', compact('session'));
+    }
+
+    public function community_detail($id)
+    {
+        $session = request()->session()->only(['name', 'email']);
+ 
+        $community = Community::with('comments')->findOrFail($id);
+
+        return view('pages.community.details', compact('community', 'session'));
+    }
+
+    public function comment_post(Request $request, $id)
+    {
+        $comment = new Comment();
+        $comment->community_id = $id;
+        $comment->comment = $request->comment;
+        $comment->name = $request->name;
+        $comment->email = $request->email;
+        $comment->save();
+
+        session(['name' => $request->name, 'email' => $request->email, ]);
+        return redirect()->back()->with('success', 'Comment posted!');
     }
 }

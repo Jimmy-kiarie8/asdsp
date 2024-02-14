@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCommunitiesTable extends Migration
+class CreateCommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateCommunitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('communities', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('community_id')->nullable();
+            $table->text('comment')->nullable();
             $table->string('name')->nullable();
             $table->string('email')->nullable();
-            $table->string('title')->nullable();
-            $table->boolean('approved')->default(0);
-            $table->boolean('email_verified')->default(0);
-            $table->text('message')->nullable();
-            $table->string('created_by')->nullable();
+
+            $table->foreign('community_id')->references('id')->on('communities')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -33,6 +32,6 @@ class CreateCommunitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('communities');
+        Schema::dropIfExists('comments');
     }
 }

@@ -144,6 +144,7 @@ Route::any('/innovation-list', '\App\Http\Controllers\AboutUs@innovation_list')-
 
 Route::any('/community', '\App\Http\Controllers\AboutUs@community')->name('community');
 Route::any('/community/create', '\App\Http\Controllers\AboutUs@community_create')->name('community_create');
+Route::any('/community/{id}', '\App\Http\Controllers\AboutUs@community_detail')->name('community_detail');
 
 // Route::get('community', function () {
 //     return view('pages.community.index');
@@ -153,8 +154,8 @@ Route::any('/community/create', '\App\Http\Controllers\AboutUs@community_create'
 //     return view('pages.community.topic');
 // });
 
-
 Route::post('/community-post', '\App\Http\Controllers\AboutUs@community_post')->name('community-post');
+Route::post('/comment-post/{id}', '\App\Http\Controllers\AboutUs@comment_post')->name('comment-post');
 
 
 

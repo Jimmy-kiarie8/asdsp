@@ -33,6 +33,9 @@
         <li>
           <a href="{{ route('contact-us') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">CONTACT</a>
         </li>
+        <li>
+          <a href="{{ route('community') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">COMMUNITY</a>
+        </li>
         
         <li>
           <a href="{{ route('login') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">LOGIN</a>
@@ -152,6 +155,11 @@
                   <li id=""
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-15">
                     <a href="{{ route('contact-us') }}" aria-current="page">CONTACT</a>
+                  </li>
+
+                  <li id=""
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-15">
+                    <a href="{{ route('community') }}" aria-current="page">COMMUNITY</a>
                   </li>
 
                   <li id=""
