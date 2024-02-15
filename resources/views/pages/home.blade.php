@@ -8,7 +8,7 @@
         <div style="" id="header-video">
             <section class="showcase">
                 <div class="video-container">
-                    <video src="https://mag.co.ke/apps/public/media/background.mp4" autoplay muted loop></video>
+                    <video src="https://asdspkm.kilimo.go.ke/public/uploads/video.mp4" autoplay muted loop></video>
                 </div>
                 {{-- <div class="content">
                     <div class="max-w-screen-xl px-4 mx-auto lg:px-12 w-full">
@@ -60,9 +60,6 @@
                 </div> --}}
             </section>
         </div>
-
-
-
 
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative">
 
